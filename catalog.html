@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner">
+        <section class="header__info-block">
+          <a class="logo">Mishka</a>
+          <button class="header__toggle">Открыть/закрыть меню</button>
+          <nav class="main-nav">
+            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+          </nav>
+          <div class="header__user-block">
+            <form class="search-form">
+              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+              <label for="search_field" class="search-form__label">Поиск по  сайту</label>
+            </form>
+            <a href="/cart" class="header__cart-link">Корзина: пока пуста</a>
+          </div>
+        </section>
+        <section class="header__content">
+          <h1 class="header__title">Милые штуки ручной работы для дома</h1>
+          <div class="header__goods">
+            <a href="/catalog/interior" class="header__goods-link">Предметы   интерьера</a>
+            <a href="/catalog/toys" class="header__goods-link">Детские  игрушки</a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <article class="catalog">
+        <section class="product">
+          <a href="/products/1" class="product__link">
+            <picture class="product__image">
+              <source media="(min-width: 1200px)" srcset="img/">
+              <source media="(min-width: 768px)" srcset="img/">
+              <img src="img/" alt="Зайчик-попрыгайчик">
+            </picture>
+          </a>
+          <div class="product__info">
+            <a href="/products/1" class="product__link">Зайчик-попрыгайчик</a>
+            <p class="product__options">Рост 30 см, вес 200 г</p>
+          </div>
+          <div class="product__buy">
+            <p class="product__price">1 200 р.</p>
+            <a href="/cart" class="product__cart-link">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+          </div>
+        </section>
+      </article>
+
+      <article class="production">
+        <h2 class="production__title">Процесс производства</h2>
+        <div class="production__video">
+          <button class="production__video-toggle">
+            <span class="visually-hidden">Пауза/продолжить видео</span>
+          </button>
+          <video src=""></video>
+        </div>
+        <p class="production__description">
+          По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.
+        </p>
+        <a href="form.html" class="btn  btn--order">Сделать заказ</a>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <section class="social">
+          <h2 class="visually-hidden">Mishka в социальных сетях:</h2>
+          <a href="#" class="social__link  social__link--insta">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+          <a href="#" class="social__link  social__link--fb">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+          <a href="#" class="social__link  social__link--twitter">
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </section>
+        <section class="footer__copyright">
+          Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">
+            <span class="visually-hidden">HTML-Academy</span>
+          </a>
+        </section>
+      </div>
+    </footer>
+    <div class="overlay">
+      <article class="modal">
+        <h2 class="modal__title">Добавить  в корзину</h2>
+        <p class="modal__description">Выберите размер:</p>
+        <form action="/" method="get" class="modal__form">
+          <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
+          <label for="check_s" class="modal__check">s</label>
+          <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden">
+          <label for="check_m" class="modal__check">m</label>
+          <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden">
+          <label for="check_l" class="modal__check">l</label>
+          <button type="submit" class="btn  btn--green">Добавить</button>
+        </form>
+      </article>
+    </div>
+  </body>
+</html>
