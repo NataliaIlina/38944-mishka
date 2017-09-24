@@ -5,8 +5,145 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__inner">
+        <section class="header__info-block">
+          <a class="logo">Mishka</a>
+          <button class="header__nav-toggle">Открыть/закрыть меню</button>
+          <nav class="main-nav">
+            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+          </nav>
+          <div class="header__user-block">
+            <form class="search-form">
+              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+              <label for="search_field" class="search-form__label">Поиск по  сайту</label>
+            </form>
+            <a href="/cart" class="header__cart-link">Корзина: пока пуста</a>
+          </div>
+        </section>
+        <section class="header__content">
+          <h1 class="header__title">Милые штуки ручной работы для дома</h1>
+          <div class="header__goods">
+            <a href="/catalog/interior" class="header__goods-link">Предметы   интерьера</a>
+            <a href="/catalog/toys" class="header__goods-link">Детские  игрушки</a>
+          </div>
+        </section>
+      </div>
+    </header>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
-
+    <main class="main-content">
+      <article class="promo-item">
+        <div class="promo-item__inner">
+          <h2 class="promo-item__title">Вязаные корзинки</h2>
+          <h3 class="promo-item__subtitle">Товар недели</h3>
+          <section class="promo-item__info">
+            <p class="promo-item__description">Экологически чистая пряжа, ручная  работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+            <table class="promo-item__options">
+              <tr class="promo-item__row">
+                <td class="promo-item__cell">Цвет:</td>
+                <td class="promo-item__cell">&quot;Тиффани&quot;/серый</td>
+              </tr>
+              <tr class="promo-item__row">
+                <td class="promo-item__cell">Диаметр:</td>
+                <td class="promo-item__cell">25 см</td>
+              </tr>
+              <tr class="promo-item__row">
+                <td class="promo-item__cell">Высота:</td>
+                <td class="promo-item__cell">15 см</td>
+              </tr>
+            </table>
+          </section>
+          <picture class="promo-item__image">
+            <source media="(min-width: 1200px)" srcset="img/">
+            <source media="(min-width: 768px)" srcset="img/">
+            <img src="img/" alt="Вязаные корзинки">
+          </picture>
+          <p class="promo-item__price">Цена: 990 руб.</p>
+          <a href="/cart" class="btn  btn--buy">Заказать</a>
+        </div>
+      </article>
+      <section class="about-us">
+        <div class="about-us__inner">
+          <h2 class="about-us__title">Коротко о нас:</h2>
+          <ul class="about-us__list">
+            <li class="about-us__item  about-us__item--ecology">Экологически  чистые  материалы</li>
+            <li class="about-us__item  about-us__item--price">Скандинавский стиль   по российской цене</li>
+            <li class="about-us__item  about-us__item--like">Увеличивает лайки на  фотографиях</li>
+            <li class="about-us__item  about-us__item--knitting">Связано вручную с   любовью и умилением</li>
+            <li class="about-us__item  about-us__item--our-product">Поддержка  отечественного производителя</li>
+            <li class="about-us__item  about-us__item--gift">Поставляется в   подарочной упаковке</li>
+          </ul>
+        </div>
+      </section>
+      <article class="feedback">
+        <div class="feedback__inner">
+          <h2 class="feedback__title">Отзывы</h2>
+          <section class="feedback__slider">
+            <blockquote class="feedback__slide">
+              Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали  и&nbsp;близко такого количества лайков, как у&nbsp;популярных  инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров  и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более  стильными, а&nbsp;также набирают больше лайков!
+              <cite class="feedback__author">Анастасия Красильникова <a href="#"  class="feedback__author-nickname">@misssssiskras</a></cite>
+            </blockquote>
+            <div class="feedback__controls">
+              <button class="feedback__btn  feedback__btn--prev">Показать предыдущий  отзыв</button>
+              <button class="feedback__btn  feedback__btn--next">Показать следующий  отзыв</button>
+            </div>
+          </section>
+          <a href="add-feedback.html" class="btn">Написать</a>
+        </div>
+      </article>
+      <article class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <section class="contacts__info">
+          <p class="contacts__mail">
+            <span>e-mail:</span>
+            <a href="mailto:info@mimimishkashop.ru"  class="contacts__link">info@mimimishkashop.ru</a>
+          </p>
+          <p class="contacts__address">
+            <span>адрес:</span>
+            <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис  101</span>
+          </p>
+        </section>
+        <section class="contacts__map"></section>
+        <a href="feedback.html" class="btn">Напишите нам</a>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <section class="social">
+          <h2 class="visually-hidden">Mishka в социальных сетях:</h2>
+          <a href="#" class="social__link  social__link--insta">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+          <a href="#" class="social__link  social__link--fb">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+          <a href="#" class="social__link  social__link--twitter">
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </section>
+        <section class="footer__copyright">
+          Разработано
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">
+            <span class="visually-hidden">HTML-Academy</span>
+          </a>
+        </section>
+      </div>
+    </footer>
+    <div class="overlay">
+      <article class="modal">
+        <h2 class="modal__title">Добавить  в корзину</h2>
+        <p class="modal__description">Выберите размер:</p>
+        <form action="/" method="get" class="modal__form">
+          <input type="checkbox" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
+          <label for="check_s" class="modal__check">s</label>
+          <input type="checkbox" name="check-size" id="check_m" value="size_m" class="visually-hidden">
+          <label for="check_m" class="modal__check">m</label>
+          <input type="checkbox" name="check-size" id="check_l" value="size_l" class="visually-hidden">
+          <label for="check_l" class="modal__check">l</label>
+          <button type="submit" class="btn  btn--green">Добавить</button>
+        </form>
+      </article>
+    </div>
   </body>
 </html>
