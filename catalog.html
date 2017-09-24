@@ -9,7 +9,7 @@
       <div class="header__inner">
         <section class="header__info-block">
           <a class="logo">Mishka</a>
-          <button class="header__toggle">Открыть/закрыть меню</button>
+          <button class="header__nav-toggle">Открыть/закрыть меню</button>
           <nav class="main-nav">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
             <a href="form.html" class="main-nav__link">Вязание на заказ</a>
@@ -23,18 +23,14 @@
           </div>
         </section>
         <section class="header__content">
-          <h1 class="header__title">Милые штуки ручной работы для дома</h1>
-          <div class="header__goods">
-            <a href="/catalog/interior" class="header__goods-link">Предметы   интерьера</a>
-            <a href="/catalog/toys" class="header__goods-link">Детские  игрушки</a>
-          </div>
+          <h1 class="header__title">Каталог товаров</h1>
         </section>
       </div>
     </header>
 
     <main class="main-content">
-      <article class="catalog">
-        <section class="product">
+      <section class="catalog">
+        <article class="product">
           <a href="/products/1" class="product__link">
             <picture class="product__image">
               <source media="(min-width: 1200px)" srcset="img/">
@@ -47,13 +43,51 @@
             <p class="product__options">Рост 30 см, вес 200 г</p>
           </div>
           <div class="product__buy">
-            <p class="product__price">1 200 р.</p>
+            <p class="product__price">1 200 руб.</p>
             <a href="/cart" class="product__cart-link">
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
           </div>
-        </section>
-      </article>
+        </article>
+        <article class="product">
+          <a href="/products/2" class="product__link">
+            <picture class="product__image">
+              <source media="(min-width: 1200px)" srcset="img/">
+              <source media="(min-width: 768px)" srcset="img/">
+              <img src="img/" alt="Корзинка для белья">
+            </picture>
+          </a>
+          <div class="product__info">
+            <a href="/products/2" class="product__link">Корзинка для белья</a>
+            <p class="product__options">Диаметр 15 см, высота 10 см</p>
+          </div>
+          <div class="product__buy">
+            <p class="product__price">690 руб.</p>
+            <a href="/cart" class="product__cart-link">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+          </div>
+        </article>
+        <article class="product">
+          <a href="/products/3" class="product__link">
+            <picture class="product__image">
+              <source media="(min-width: 1200px)" srcset="img/">
+              <source media="(min-width: 768px)" srcset="img/">
+              <img src="img/" alt="Большая корзинка для игрушек">
+            </picture>
+          </a>
+          <div class="product__info">
+            <a href="/products/3" class="product__link">Большая корзинка для игрушек</a>
+            <p class="product__options">Диаметр 30 см, высота 30 см</p>
+          </div>
+          <div class="product__buy">
+            <p class="product__price">1 500 руб.</p>
+            <a href="/cart" class="product__cart-link">
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
+          </div>
+        </article>
+      </section>
 
       <article class="production">
         <h2 class="production__title">Процесс производства</h2>
@@ -66,7 +100,7 @@
         <p class="production__description">
           По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.
         </p>
-        <a href="form.html" class="btn  btn--order">Сделать заказ</a>
+        <a href="form.html" class="btn">Сделать заказ</a>
       </article>
     </main>
 
@@ -97,11 +131,11 @@
         <h2 class="modal__title">Добавить  в корзину</h2>
         <p class="modal__description">Выберите размер:</p>
         <form action="/" method="get" class="modal__form">
-          <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
+          <input type="checkbox" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
           <label for="check_s" class="modal__check">s</label>
-          <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden">
+          <input type="checkbox" name="check-size" id="check_m" value="size_m" class="visually-hidden">
           <label for="check_m" class="modal__check">m</label>
-          <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden">
+          <input type="checkbox" name="check-size" id="check_l" value="size_l" class="visually-hidden">
           <label for="check_l" class="modal__check">l</label>
           <button type="submit" class="btn  btn--green">Добавить</button>
         </form>

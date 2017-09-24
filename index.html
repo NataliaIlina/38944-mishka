@@ -9,7 +9,7 @@
       <div class="header__inner">
         <section class="header__info-block">
           <a class="logo">Mishka</a>
-          <button class="header__toggle">Открыть/закрыть меню</button>
+          <button class="header__nav-toggle">Открыть/закрыть меню</button>
           <nav class="main-nav">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
             <a href="form.html" class="main-nav__link">Вязание на заказ</a>
@@ -76,34 +76,36 @@
           </ul>
         </div>
       </section>
-      <article class="comments">
-        <div class="comments__inner">
-          <h2 class="comments__title">Отзывы</h2>
-          <section class="comments__slider">
-            <blockquote class="comments__slide">
+      <article class="feedback">
+        <div class="feedback__inner">
+          <h2 class="feedback__title">Отзывы</h2>
+          <section class="feedback__slider">
+            <blockquote class="feedback__slide">
               Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали  и&nbsp;близко такого количества лайков, как у&nbsp;популярных  инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров  и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более  стильными, а&nbsp;также набирают больше лайков!
-              <cite class="comments__author">Анастасия Красильникова <a href="#"  class="comments__author-nickname">@misssssiskras</a></cite>
+              <cite class="feedback__author">Анастасия Красильникова <a href="#"  class="feedback__author-nickname">@misssssiskras</a></cite>
             </blockquote>
-            <div class="comments__controls">
-              <button class="comments__btn  comments__btn--prev">Показать предыдущий  отзыв</button>
-              <button class="comments__btn  comments__btn--next">Показать следующий  отзыв</button>
+            <div class="feedback__controls">
+              <button class="feedback__btn  feedback__btn--prev">Показать предыдущий  отзыв</button>
+              <button class="feedback__btn  feedback__btn--next">Показать следующий  отзыв</button>
             </div>
           </section>
-          <a href="add-comment.html" class="btn  btn--comment">Написать</a>
+          <a href="add-feedback.html" class="btn">Написать</a>
         </div>
       </article>
       <article class="contacts">
         <h2 class="contacts__title">Контакты</h2>
         <section class="contacts__info">
           <p class="contacts__mail">
-            e-mail: <a href="mailto:info@mimimishkashop.ru"  class="contacts__link">info@mimimishkashop.ru</a>
+            <span>e-mail:</span>
+            <a href="mailto:info@mimimishkashop.ru"  class="contacts__link">info@mimimishkashop.ru</a>
           </p>
           <p class="contacts__address">
-            адрес: <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис  101</span>
+            <span>адрес:</span>
+            <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис  101</span>
           </p>
         </section>
         <section class="contacts__map"></section>
-        <a href="feedback.html" class="btn  btn--feedback">Напишите нам</a>
+        <a href="feedback.html" class="btn">Напишите нам</a>
       </article>
     </main>
     <footer class="footer">
@@ -133,11 +135,11 @@
         <h2 class="modal__title">Добавить  в корзину</h2>
         <p class="modal__description">Выберите размер:</p>
         <form action="/" method="get" class="modal__form">
-          <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
+          <input type="checkbox" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
           <label for="check_s" class="modal__check">s</label>
-          <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden">
+          <input type="checkbox" name="check-size" id="check_m" value="size_m" class="visually-hidden">
           <label for="check_m" class="modal__check">m</label>
-          <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden">
+          <input type="checkbox" name="check-size" id="check_l" value="size_l" class="visually-hidden">
           <label for="check_l" class="modal__check">l</label>
           <button type="submit" class="btn  btn--green">Добавить</button>
         </form>
