@@ -25,8 +25,8 @@
         <section class="header__content">
           <h1 class="header__title">Милые штуки ручной работы для дома</h1>
           <div class="header__goods">
-            <a href="/catalog/interior" class="header__goods-link">Предметы   интерьера</a>
-            <a href="/catalog/toys" class="header__goods-link">Детские  игрушки</a>
+            <a href="/catalog/interior" class="header__goods-link  header__goods-link--interior">Предметы   интерьера</a>
+            <a href="/catalog/toys" class="header__goods-link  header__goods-link--toys">Детские  игрушки</a>
           </div>
         </section>
       </div>
@@ -38,7 +38,9 @@
           <h2 class="promo-item__title">Вязаные корзинки</h2>
           <h3 class="promo-item__subtitle">Товар недели</h3>
           <section class="promo-item__info">
-            <p class="promo-item__description">Экологически чистая пряжа, ручная  работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.</p>
+            <p class="promo-item__description">
+              Экологически чистая пряжа, ручная  работа. Доступны в&nbsp;шести расцветках, и&nbsp;трех размерах.
+            </p>
             <table class="promo-item__options">
               <tr class="promo-item__row">
                 <td class="promo-item__cell">Цвет:</td>
@@ -67,12 +69,24 @@
         <div class="about-us__inner">
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__list">
-            <li class="about-us__item  about-us__item--ecology">Экологически  чистые  материалы</li>
-            <li class="about-us__item  about-us__item--price">Скандинавский стиль   по российской цене</li>
-            <li class="about-us__item  about-us__item--like">Увеличивает лайки на  фотографиях</li>
-            <li class="about-us__item  about-us__item--knitting">Связано вручную с   любовью и умилением</li>
-            <li class="about-us__item  about-us__item--our-product">Поддержка  отечественного производителя</li>
-            <li class="about-us__item  about-us__item--gift">Поставляется в   подарочной упаковке</li>
+            <li class="about-us__item  about-us__item--ecology">
+              Экологически  чистые  материалы
+            </li>
+            <li class="about-us__item  about-us__item--price">
+              Скандинавский стиль   по российской цене
+            </li>
+            <li class="about-us__item  about-us__item--like">
+              Увеличивает лайки на  фотографиях
+            </li>
+            <li class="about-us__item  about-us__item--knitting">
+              Связано вручную с   любовью и умилением
+            </li>
+            <li class="about-us__item  about-us__item--our-product">
+              Поддержка  отечественного производителя
+            </li>
+            <li class="about-us__item  about-us__item--gift">
+              Поставляется в   подарочной упаковке
+            </li>
           </ul>
         </div>
       </section>
@@ -82,11 +96,25 @@
           <section class="feedback__slider">
             <blockquote class="feedback__slide">
               Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали  и&nbsp;близко такого количества лайков, как у&nbsp;популярных  инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров  и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более  стильными, а&nbsp;также набирают больше лайков!
-              <cite class="feedback__author">Анастасия Красильникова <a href="#"  class="feedback__author-nickname">@misssssiskras</a></cite>
+              <cite class="feedback__author">Анастасия Красильникова
+                <a href="#"  class="feedback__author-nickname">@misssssiskras</a>
+              </cite>
+            </blockquote>
+            <blockquote class="feedback__slide">
+              Я&nbsp;постоянно заказываю милые вещички для интерьера в&nbsp;вашем магазине! Они сделаны из&nbsp;натуральных материалов и&nbsp;совсем не&nbsp;травмируют мои нежные коготки. А&nbsp;разнообразные расцветки поднимают настроение каждый день! Котэ доволен! Всем мяу!
+              <cite class="feedback__author">Инструктор Кекс
+                <a href="#"  class="feedback__author-nickname">@keks</a>
+              </cite>
+            </blockquote>
+            <blockquote class="feedback__slide">
+              Отзыв будет добавлен позже
+              <cite class="feedback__author">Наталья Ильина
+                <a href="#"  class="feedback__author-nickname">@ellianta</a>
+              </cite>
             </blockquote>
             <div class="feedback__controls">
-              <button class="feedback__btn  feedback__btn--prev">Показать предыдущий  отзыв</button>
-              <button class="feedback__btn  feedback__btn--next">Показать следующий  отзыв</button>
+              <button class="feedback__toggle  feedback__toggle--prev">Показать предыдущий  отзыв</button>
+              <button class="feedback__toggle  feedback__toggle--next">Показать следующий  отзыв</button>
             </div>
           </section>
           <a href="add-feedback.html" class="btn">Написать</a>
@@ -94,16 +122,16 @@
       </article>
       <article class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-        <section class="contacts__info">
-          <p class="contacts__mail">
-            <span>e-mail:</span>
+        <dl class="contacts__info">
+          <dt class="contacts__name">e-mail:</dt>
+          <dd class="contacts__email">
             <a href="mailto:info@mimimishkashop.ru"  class="contacts__link">info@mimimishkashop.ru</a>
-          </p>
-          <p class="contacts__address">
-            <span>адрес:</span>
-            <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис  101</span>
-          </p>
-        </section>
+          </dd>
+          <dt class="contacts__name">Адрес:</dt>
+          <dd class="contacts__address">
+            г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис  101
+          </dd>
+        </dl>
         <section class="contacts__map"></section>
         <a href="feedback.html" class="btn">Напишите нам</a>
       </article>
@@ -135,11 +163,11 @@
         <h2 class="modal__title">Добавить  в корзину</h2>
         <p class="modal__description">Выберите размер:</p>
         <form action="/" method="get" class="modal__form">
-          <input type="checkbox" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
+          <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
           <label for="check_s" class="modal__check">s</label>
-          <input type="checkbox" name="check-size" id="check_m" value="size_m" class="visually-hidden">
+          <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden">
           <label for="check_m" class="modal__check">m</label>
-          <input type="checkbox" name="check-size" id="check_l" value="size_l" class="visually-hidden">
+          <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden">
           <label for="check_l" class="modal__check">l</label>
           <button type="submit" class="btn  btn--green">Добавить</button>
         </form>
