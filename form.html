@@ -9,21 +9,29 @@
     <header class="header">
       <div class="header__inner">
         <section class="header__info-block">
-          <a class="logo">Mishka</a>
-          <button class="header__nav-toggle">Открыть/закрыть меню</button>
+          <a href="index.html" class="logo">
+            <picture class="logo__image">
+              <source media="(min-width: 1200px)" srcset="">
+              <source media="(min-width: 768px)" srcset="">
+              <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+            </picture>
+          </a>
+          <button class="header__nav-toggle">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
           <nav class="main-nav">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+            <a class="main-nav__link  main-nav__link--active">Вязание на заказ</a>
+            <div class="main-nav__user-block">
+              <form class="search-form">
+                <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+                <label for="search_field" class="search-form__label"></label>
+              </form>
+              <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
+            </div>
           </nav>
-          <div class="header__user-block">
-            <form class="search-form">
-              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
-              <label for="search_field" class="search-form__label">Поиск по  сайту</label>
-            </form>
-            <a href="/cart" class="header__cart-link">Корзина: пока пуста</a>
-          </div>
         </section>
-        <section class="header__content">
+        <section class="header__content  header__content--inner-page">
           <h1 class="header__title">Вязание на заказ</h1>
         </section>
       </div>
@@ -118,5 +126,6 @@
         </section>
       </div>
     </footer>
+  <script src="js/script.js"></script>
   </body>
 </html>
