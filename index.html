@@ -9,25 +9,37 @@
     <header class="header">
       <div class="header__inner">
         <section class="header__info-block">
-          <a class="logo">Mishka</a>
-          <button class="header__nav-toggle">Открыть/закрыть меню</button>
+          <a class="logo">
+            <picture class="logo__image">
+              <source media="(min-width: 1200px)" srcset="">
+              <source media="(min-width: 768px)" srcset="">
+              <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+            </picture>
+          </a>
+          <button type="button" class="header__nav-toggle">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
           <nav class="main-nav">
             <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
             <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+            <div class="main-nav__user-block">
+              <form class="search-form">
+                <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+                <label for="search_field" class="search-form__label"></label>
+              </form>
+              <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
+            </div>
           </nav>
-          <div class="header__user-block">
-            <form class="search-form">
-              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
-              <label for="search_field" class="search-form__label">Поиск по  сайту</label>
-            </form>
-            <a href="/cart" class="header__cart-link">Корзина: пока пуста</a>
-          </div>
         </section>
         <section class="header__content">
-          <h1 class="header__title">Милые штуки ручной работы для дома</h1>
+          <h1 class="header__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
           <div class="header__goods">
-            <a href="/catalog/interior" class="header__goods-link  header__goods-link--interior">Предметы   интерьера</a>
-            <a href="/catalog/toys" class="header__goods-link  header__goods-link--toys">Детские  игрушки</a>
+            <a href="/catalog/interior" class="header__goods-link  header__goods-link--interior">
+              <span>Предметы   интерьера</span>
+            </a>
+            <a href="/catalog/toys" class="header__goods-link  header__goods-link--toys">
+              <span>Детские  игрушки</span>
+            </a>
           </div>
         </section>
       </div>
@@ -174,5 +186,6 @@
         </form>
       </article>
     </div>
+  <script src="js/script.js"></script>
   </body>
 </html>
