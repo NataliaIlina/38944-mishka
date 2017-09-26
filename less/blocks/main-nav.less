@@ -1,0 +1,35 @@
+.main-nav {
+  background-color: @white;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  top: 80px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+
+  &--close {
+
+    @media @only-mobile {
+      transform: translateY(-200%);
+    }
+  }
+}
+
+.main-nav__link {
+  color: @black;
+  display: block;
+  text-decoration: none;
+  padding: 28px 30px;
+  padding-left: 75px;
+  border-bottom: 1px solid @border-color;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
