@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -16,21 +16,21 @@
               <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
             </picture>
           </a>
-          <button type="button" class="header__nav-toggle">
+          <button type="button" class="header__nav-toggle  header__nav-toggle--nojs">
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
-          <nav class="main-nav">
-            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
-            <div class="main-nav__user-block">
-              <form class="search-form">
-                <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
-                <label for="search_field" class="search-form__label"></label>
-              </form>
-              <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
-            </div>
-          </nav>
         </section>
+        <nav class="main-nav">
+          <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+          <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+          <div class="main-nav__user-block">
+            <form class="search-form">
+              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+              <label for="search_field" class="search-form__label"></label>
+            </form>
+            <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
+          </div>
+        </nav>
         <section class="header__content">
           <h1 class="header__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
           <div class="header__goods">
@@ -75,7 +75,7 @@
             <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
           </picture>
           <p class="promo-item__price">Цена: 990 руб.</p>
-          <a href="/cart" class="btn  promo-item__btn  btn--buy">Заказать</a>
+          <a href="/cart" class="btn  promo-item__btn  buy-btn">Заказать</a>
         </div>
       </article>
       <section class="about-us">
@@ -194,11 +194,11 @@
       <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
       <p class="modal__description">Выберите размер:</p>
       <form action="/" method="get" class="modal__form">
-        <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden  modal__radio  modal__radio--s" checked>
+        <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden  modal__radio" checked>
         <label for="check_s" class="modal__check">s</label>
-        <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden  modal__radio  modal__radio--m">
+        <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden  modal__radio">
         <label for="check_m" class="modal__check">m</label>
-        <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden  modal__radio  modal__radio--l">
+        <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden  modal__radio">
         <label for="check_l" class="modal__check">l</label>
         <button type="submit" class="btn  btn--green  modal__btn">Добавить</button>
       </form>

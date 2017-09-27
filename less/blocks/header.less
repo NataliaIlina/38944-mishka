@@ -11,8 +11,6 @@
   display: flex;
   height: 79px;
   border-bottom: 1px solid @border-color;
-
-  flex-wrap: wrap;
 }
 
 .header__nav-toggle {
@@ -25,6 +23,7 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
+  outline: none;
 
   &::before {
     position: absolute;
@@ -71,6 +70,10 @@
   }
 }
 
+.header__nav-toggle--nojs {
+  display: none;
+}
+
 .header__content {
   display: flex;
   width: 100%;
@@ -86,8 +89,8 @@
 
   &--inner-page {
     min-height: 178px;
-    background: @background-gray;
     margin-bottom: 0;
+    background: @background-gray;
   }
 }
 

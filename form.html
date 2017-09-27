@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
@@ -16,21 +16,21 @@
               <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
             </picture>
           </a>
-          <button class="header__nav-toggle">
+          <button class="header__nav-toggle  header__nav-toggle--nojs">
             <span class="visually-hidden">Открыть/закрыть меню</span>
           </button>
-          <nav class="main-nav">
-            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-            <a class="main-nav__link  main-nav__link--active">Вязание на заказ</a>
-            <div class="main-nav__user-block">
-              <form class="search-form">
-                <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
-                <label for="search_field" class="search-form__label"></label>
-              </form>
-              <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
-            </div>
-          </nav>
         </section>
+        <nav class="main-nav">
+          <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+          <a class="main-nav__link  main-nav__link--active">Вязание на заказ</a>
+          <div class="main-nav__user-block">
+            <form class="search-form">
+              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+              <label for="search_field" class="search-form__label"></label>
+            </form>
+            <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
+          </div>
+        </nav>
         <section class="header__content  header__content--inner-page">
           <h1 class="header__title">Вязание на заказ</h1>
         </section>
@@ -46,26 +46,26 @@
           <fieldset class="form__block">
             <div class="form__inner">
               <h2 class="form__title">Тип</h2>
-              <input type="radio" name="type" id="type_interior" value="interior" class="visually-hidden  form__radio  form__radio--interior" checked>
+              <input type="radio" name="type" id="type_interior" value="interior" class="visually-hidden  form__radio" checked>
               <label for="type_interior" class="form__radio-label">Аксессуар для  интерьера</label>
-              <input type="radio" name="type" id="type_toy" value="toy" class="visually-hidden  form__radio  form__radio--toys">
+              <input type="radio" name="type" id="type_toy" value="toy" class="visually-hidden  form__radio">
               <label for="type_toy" class="form__radio-label">Детская игрушка</label>
             </div>
           </fieldset>
           <fieldset class="form__block">
             <div class="form__inner">
               <h2 class="form__title">Цвет</h2>
-              <input type="checkbox" class="visually-hidden  form__checkbox  form__checkbox--white" name="check-color" value="color_white" id="color_white" checked>
+              <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_white" id="color_white" checked>
               <label for="color_white" class="form__checkbox-label">Белый</label>
-              <input type="checkbox" class="visually-hidden  form__checkbox  form__checkbox--gray" name="check-color" value="color_gray" id="color_gray" checked>
+              <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_gray" id="color_gray" checked>
               <label for="color_gray" class="form__checkbox-label">Серый</label>
-              <input type="checkbox" class="visually-hidden  form__checkbox  form__checkbox--tiffany" name="check-color" value="color_tiffany" id="color_tiffany">
+              <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_tiffany" id="color_tiffany">
               <label for="color_tiffany" class="form__checkbox-label">&laquo;Тиффани&raquo;</label>
-              <input type="checkbox" class="visually-hidden  form__checkbox  form__checkbox--black" name="check-color" value="color_black" id="color_black">
+              <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_black" id="color_black">
               <label for="color_black" class="form__checkbox-label">Черный</label>
-              <input type="checkbox" class="visually-hidden  form__checkbox  form__checkbox--pink" name="check-color" value="color_pink" id="color_pink">
+              <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_pink" id="color_pink">
               <label for="color_pink" class="form__checkbox-label">Розовый</label>
-              <input type="checkbox" class="visually-hidden  form__checkbox  form__checkbox--orange" name="check-color" value="color_orange" id="color_orange">
+              <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_orange" id="color_orange">
               <label for="color_orange" class="form__checkbox-label">Оранжевый</label>
             </div>
           </fieldset>
