@@ -1,0 +1,70 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 320px;
+  height: 340px;
+  padding: 30px;
+  text-align: center;
+  background-color: @white;
+  border: 1px solid @border-color;
+  transform: translate3d(-50%, -500%, 0);
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  box-sizing: border-box;
+
+  &--show {
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.modal__description {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.modal__btn {
+  width: 100%;
+}
+
+.modal__form {
+  display: flex;
+
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.modal__check {
+  display: block;
+  width: 82px;
+  height: 52px;
+  padding: 15px;
+  margin-bottom: 30px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid @border-color;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+}
+
+.modal__radio--s:checked + label,
+.modal__radio--m:checked + label,
+.modal__radio--l:checked + label {
+  border-color: @green-lighten;
+}

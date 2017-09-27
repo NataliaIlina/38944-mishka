@@ -1,0 +1,21 @@
+.search-form {
+  border-bottom: 1px solid @border-color;
+}
+
+.search-form__field {
+  width: 100%;
+  padding: 28px 30px;
+  padding-left: 75px;
+  font: inherit;
+  border: none;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: @black;
+  }
+
+  &:hover::placeholder,
+  &:focus::placeholder {
+    opacity: 0.6;
+  }
+}
