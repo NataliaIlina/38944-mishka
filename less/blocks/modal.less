@@ -10,7 +10,7 @@
   background-color: @white;
   border: 1px solid @border-color;
   transform: translate3d(-50%, -500%, 0);
-  box-shadow: 0px 5px 10px 0px rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
   box-sizing: border-box;
 
   &--show {
@@ -59,8 +59,8 @@
   box-sizing: border-box;
 }
 
-#check_s:checked + label,
-#check_m:checked + label,
-#check_l:checked + label {
+.modal__radio--s:checked + label,
+.modal__radio--m:checked + label,
+.modal__radio--l:checked + label {
   border-color: @green-lighten;
 }
