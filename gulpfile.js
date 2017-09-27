@@ -1,8 +1,8 @@
 "use strict";
 
 var gulp = require("gulp");
-var csso = require('gulp-csso');
-var rename = require('gulp-rename');
+// var csso = require('gulp-csso');
+// var rename = require('gulp-rename');
 var less = require("gulp-less");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -18,11 +18,11 @@ gulp.task("style", function() {
       autoprefixer()
     ]))
     .pipe(gulp.dest("css"))
-    .pipe(csso())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest("css"))
+    // .pipe(csso())
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
+    // .pipe(gulp.dest("css"))
     .pipe(server.stream());
 });
 
