@@ -40,76 +40,79 @@
     <main class="main-content">
       <section class="catalog">
         <article class="product">
-          <a href="/products/1" class="product__link">
+          <a href="/products/1">
             <picture class="product__image">
               <source media="(min-width: 1200px)" srcset="img/">
               <source media="(min-width: 768px)" srcset="img/">
-              <img src="img/" alt="Зайчик-попрыгайчик">
+              <img src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
             </picture>
           </a>
           <div class="product__info">
             <a href="/products/1" class="product__link">Зайчик-попрыгайчик</a>
             <p class="product__options">Рост 30 см, вес 200 г</p>
-          </div>
-          <div class="product__buy">
-            <p class="product__price">1 200 руб.</p>
-            <a href="/cart" class="product__cart-link">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product__buy">
+              <p class="product__price">1 200 руб.</p>
+              <a href="/cart" class="product__cart-link">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </div>
           </div>
         </article>
         <article class="product">
-          <a href="/products/2" class="product__link">
+          <a href="/products/2">
             <picture class="product__image">
               <source media="(min-width: 1200px)" srcset="img/">
               <source media="(min-width: 768px)" srcset="img/">
-              <img src="img/" alt="Корзинка для белья">
+              <img src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
             </picture>
           </a>
           <div class="product__info">
             <a href="/products/2" class="product__link">Корзинка для белья</a>
             <p class="product__options">Диаметр 15 см, высота 10 см</p>
-          </div>
-          <div class="product__buy">
-            <p class="product__price">690 руб.</p>
-            <a href="/cart" class="product__cart-link">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product__buy">
+              <p class="product__price">690 руб.</p>
+              <a href="/cart" class="product__cart-link">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </div>
           </div>
         </article>
         <article class="product">
-          <a href="/products/3" class="product__link">
+          <a href="/products/3">
             <picture class="product__image">
               <source media="(min-width: 1200px)" srcset="img/">
               <source media="(min-width: 768px)" srcset="img/">
-              <img src="img/" alt="Большая корзинка для игрушек">
+              <img src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
             </picture>
           </a>
           <div class="product__info">
             <a href="/products/3" class="product__link">Большая корзинка для игрушек</a>
             <p class="product__options">Диаметр 30 см, высота 30 см</p>
-          </div>
-          <div class="product__buy">
-            <p class="product__price">1 500 руб.</p>
-            <a href="/cart" class="product__cart-link">
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product__buy">
+              <p class="product__price">1 500 руб.</p>
+              <a href="/cart" class="product__cart-link">
+                <span class="visually-hidden">Добавить в корзину</span>
+              </a>
+            </div>
           </div>
         </article>
       </section>
 
       <article class="production">
-        <h2 class="production__title">Процесс производства</h2>
-        <div class="production__video">
+        <div class="production__inner">
+          <h2 class="production__title">Процесс производства</h2>
+          <video class="production__video" src="" poster="img/video-mobile@1x.jpg">
+          </video>
           <button class="production__video-toggle">
             <span class="visually-hidden">Пауза/продолжить видео</span>
           </button>
-          <video src=""></video>
+          <div class="production__info">
+            <p class="production__description">
+              По&nbsp;просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbsp;том, как появляются наши товары.
+            </p>
+            <a href="form.html" class="btn  production__btn">Сделать заказ</a>
+          </div>
         </div>
-        <p class="production__description">
-          По&nbsp;просьбам наших любимых фолловеров мы&nbsp;сняли для вас подробное видео о&nbsp;том, как появляются наши товары.
-        </p>
-        <a href="form.html" class="btn">Сделать заказ</a>
       </article>
     </main>
 
