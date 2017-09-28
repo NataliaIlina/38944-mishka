@@ -87,6 +87,11 @@
   content: "";
 }
 
+.form__radio:focus + label::before,
+.form__checkbox:focus + label::before {
+  border-color: @green-lighten;
+}
+
 .form__checkbox-label {
   margin-bottom: 23px;
 }
