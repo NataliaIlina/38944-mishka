@@ -1,0 +1,64 @@
+.about-us {
+  padding: 28px 0 0;
+}
+
+.about-us__inner {
+  .inner();
+}
+
+.about-us__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.about-us__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.about-us__item {
+  position: relative;
+  height: 123px;
+  padding: 60px 0 20px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    width: 60px;
+    height: 40px;
+    content: "";
+  }
+
+  &--ecology::before {
+    background: @white url("../img/icon-feature-flower.svg") no-repeat center;
+  }
+
+  &--price::before {
+    background: @white url("../img/icon-feature-money.svg") no-repeat 5px 2px;
+  }
+
+  &--like::before {
+    background: @white url("../img/icon-feature-heart.svg") no-repeat 12px 7px;
+  }
+
+  &--knitting::before {
+    background: @white url("../img/icon-feature-ball.svg") no-repeat 7px 5px;
+  }
+
+  &--our-product::before {
+    background: @white url("../img/icon-feature-rocket.svg") no-repeat 0 5px;
+  }
+
+  &--gift::before {
+    background: @white url("../img/icon-feature-gift.svg") no-repeat 7px 5px;
+  }
+}

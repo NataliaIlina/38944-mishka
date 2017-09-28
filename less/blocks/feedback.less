@@ -1,0 +1,106 @@
+.feedback {
+  padding: 35px 0 50px;
+}
+
+.feedback__inner {
+  width: 100%;
+  box-sizing: border-box;
+
+  .inner();
+}
+
+.feedback__title {
+  margin: 0;
+  margin-bottom: 23px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.feedback__slider {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.feedback__slider-inner {
+  display: flex;
+  width: 300%;
+
+  justify-content: space-between;
+}
+
+.feedback__slide {
+  width: 33%;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2;
+  box-sizing: border-box;
+}
+
+.feedback__author {
+  display: block;
+  padding: 28px 0;
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.feedback__author-nickname {
+  display: block;
+  padding: 5px 0;
+  font-weight: 400;
+  color: @black;
+}
+
+.feedback__controls {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+}
+
+.feedback__toggle {
+  position: relative;
+  width: 50%;
+  padding: 0;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid @border-color;
+  outline: none;
+
+  &:first-of-type {
+    border-right: none;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: @white url("../img/icon-left-arrow.svg") no-repeat center;
+    content: "";
+  }
+
+  &--next::after {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+.feedback__btn {
+  width: 100%;
+}

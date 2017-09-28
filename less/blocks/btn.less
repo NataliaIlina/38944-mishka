@@ -1,0 +1,45 @@
+.btn {
+  display: inline-block;
+  padding: 14px 20px;
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: @black;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: @white;
+  border: 2px solid @brown;
+  outline: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @brown;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @brown;
+  }
+
+  &--green {
+    color: @white;
+    background-color: @green-lighten;
+    border: 2px solid @green-lighten;
+
+    &:hover,
+    &:focus {
+      background-color: @green-darken;
+      border: 2px solid @green-darken;
+    }
+
+    &:active {
+      background-color: @green-darken;
+      border: 2px solid @green-darken;
+    }
+  }
+}

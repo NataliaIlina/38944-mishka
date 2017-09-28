@@ -3,30 +3,43 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="header">
       <div class="header__inner">
         <section class="header__info-block">
-          <a class="logo">Mishka</a>
-          <button class="header__nav-toggle">Открыть/закрыть меню</button>
-          <nav class="main-nav">
-            <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-            <a href="form.html" class="main-nav__link">Вязание на заказ</a>
-          </nav>
-          <div class="header__user-block">
+          <a class="logo">
+            <picture class="logo__image">
+              <source media="(min-width: 1200px)" srcset="">
+              <source media="(min-width: 768px)" srcset="">
+              <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+            </picture>
+          </a>
+          <button type="button" class="header__nav-toggle  header__nav-toggle--nojs">
+            <span class="visually-hidden">Открыть/закрыть меню</span>
+          </button>
+        </section>
+        <nav class="main-nav">
+          <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
+          <a href="form.html" class="main-nav__link">Вязание на заказ</a>
+          <div class="main-nav__user-block">
             <form class="search-form">
               <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
-              <label for="search_field" class="search-form__label">Поиск по  сайту</label>
+              <label for="search_field" class="search-form__label"></label>
             </form>
-            <a href="/cart" class="header__cart-link">Корзина: пока пуста</a>
+            <a href="/cart" class="main-nav__link  main-nav__link--cart">Корзина: пока пуста</a>
           </div>
-        </section>
+        </nav>
         <section class="header__content">
-          <h1 class="header__title">Милые штуки ручной работы для дома</h1>
+          <h1 class="header__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
           <div class="header__goods">
-            <a href="/catalog/interior" class="header__goods-link  header__goods-link--interior">Предметы   интерьера</a>
-            <a href="/catalog/toys" class="header__goods-link  header__goods-link--toys">Детские  игрушки</a>
+            <a href="/catalog/interior" class="header__goods-link  header__goods-link--interior">
+              <span>Предметы   интерьера</span>
+            </a>
+            <a href="/catalog/toys" class="header__goods-link  header__goods-link--toys">
+              <span>Детские  игрушки</span>
+            </a>
           </div>
         </section>
       </div>
@@ -44,7 +57,7 @@
             <table class="promo-item__options">
               <tr class="promo-item__row">
                 <td class="promo-item__cell">Цвет:</td>
-                <td class="promo-item__cell">&quot;Тиффани&quot;/серый</td>
+                <td class="promo-item__cell">&laquo;Тиффани&raquo;/серый</td>
               </tr>
               <tr class="promo-item__row">
                 <td class="promo-item__cell">Диаметр:</td>
@@ -59,10 +72,10 @@
           <picture class="promo-item__image">
             <source media="(min-width: 1200px)" srcset="img/">
             <source media="(min-width: 768px)" srcset="img/">
-            <img src="img/" alt="Вязаные корзинки">
+            <img src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
           </picture>
           <p class="promo-item__price">Цена: 990 руб.</p>
-          <a href="/cart" class="btn  btn--buy">Заказать</a>
+          <a href="/cart" class="btn  promo-item__btn  buy-btn">Заказать</a>
         </div>
       </article>
       <section class="about-us">
@@ -70,22 +83,22 @@
           <h2 class="about-us__title">Коротко о нас:</h2>
           <ul class="about-us__list">
             <li class="about-us__item  about-us__item--ecology">
-              Экологически  чистые  материалы
+              Экологически  чистые&nbsp;материалы
             </li>
             <li class="about-us__item  about-us__item--price">
-              Скандинавский стиль   по российской цене
+              Скандинавский стиль по&nbsp;российской цене
             </li>
             <li class="about-us__item  about-us__item--like">
-              Увеличивает лайки на  фотографиях
+              Увеличивает лайки на&nbsp;фотографиях
             </li>
             <li class="about-us__item  about-us__item--knitting">
-              Связано вручную с   любовью и умилением
+              Связано вручную с любовью&nbsp;и умилением
             </li>
             <li class="about-us__item  about-us__item--our-product">
               Поддержка  отечественного производителя
             </li>
             <li class="about-us__item  about-us__item--gift">
-              Поставляется в   подарочной упаковке
+              Поставляется в   подарочной&nbsp;упаковке
             </li>
           </ul>
         </div>
@@ -94,46 +107,52 @@
         <div class="feedback__inner">
           <h2 class="feedback__title">Отзывы</h2>
           <section class="feedback__slider">
-            <blockquote class="feedback__slide">
-              Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали  и&nbsp;близко такого количества лайков, как у&nbsp;популярных  инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров  и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более  стильными, а&nbsp;также набирают больше лайков!
-              <cite class="feedback__author">Анастасия Красильникова
-                <a href="#"  class="feedback__author-nickname">@misssssiskras</a>
-              </cite>
-            </blockquote>
-            <blockquote class="feedback__slide">
-              Я&nbsp;постоянно заказываю милые вещички для интерьера в&nbsp;вашем магазине! Они сделаны из&nbsp;натуральных материалов и&nbsp;совсем не&nbsp;травмируют мои нежные коготки. А&nbsp;разнообразные расцветки поднимают настроение каждый день! Котэ доволен! Всем мяу!
-              <cite class="feedback__author">Инструктор Кекс
-                <a href="#"  class="feedback__author-nickname">@keks</a>
-              </cite>
-            </blockquote>
-            <blockquote class="feedback__slide">
-              Отзыв будет добавлен позже
-              <cite class="feedback__author">Наталья Ильина
-                <a href="#"  class="feedback__author-nickname">@ellianta</a>
-              </cite>
-            </blockquote>
+            <div class="feedback__slider-inner">
+              <blockquote class="feedback__slide">
+                Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали  и&nbsp;близко такого количества лайков, как у популярных  инстамамочек. В отчаянии, я&nbsp;накупила аксессуаров  и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более  стильными, а&nbsp;также набирают больше лайков!
+                <cite class="feedback__author">Анастасия Красильникова
+                  <a href="#"  class="feedback__author-nickname">@misssssiskras</a>
+                </cite>
+              </blockquote>
+              <blockquote class="feedback__slide">
+                Я&nbsp;постоянно заказываю милые вещички для интерьера в&nbsp;вашем магазине! Они сделаны из&nbsp;натуральных материалов и&nbsp;совсем не&nbsp;травмируют мои нежные коготки. А&nbsp;разнообразные расцветки поднимают настроение каждый день! Котэ доволен! Всем мяу!
+                <cite class="feedback__author">Инструктор Кекс
+                  <a href="#"  class="feedback__author-nickname">@keks</a>
+                </cite>
+              </blockquote>
+              <blockquote class="feedback__slide">
+                Отзыв будет добавлен позже
+                <cite class="feedback__author">Наталья Ильина
+                  <a href="#"  class="feedback__author-nickname">@ellianta</a>
+                </cite>
+              </blockquote>
+            </div>
             <div class="feedback__controls">
               <button class="feedback__toggle  feedback__toggle--prev">Показать предыдущий  отзыв</button>
               <button class="feedback__toggle  feedback__toggle--next">Показать следующий  отзыв</button>
             </div>
           </section>
-          <a href="add-feedback.html" class="btn">Написать</a>
+          <a href="add-feedback.html" class="btn  feedback__btn">Написать</a>
         </div>
       </article>
       <article class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <dl class="contacts__info">
-          <dt class="contacts__name">e-mail:</dt>
-          <dd class="contacts__email">
-            <a href="mailto:info@mimimishkashop.ru"  class="contacts__link">info@mimimishkashop.ru</a>
-          </dd>
-          <dt class="contacts__name">Адрес:</dt>
-          <dd class="contacts__address">
-            г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис  101
-          </dd>
-        </dl>
+        <div class="contacts__inner">
+          <h2 class="contacts__title">Контакты</h2>
+          <dl class="contacts__info">
+            <dt class="contacts__name">e-mail:</dt>
+            <dd class="contacts__email">
+              <a href="mailto:info@mimimishkashop.ru"  class="contacts__link">info@mimimishkashop.ru</a>
+            </dd>
+            <dt class="contacts__name">Адрес:</dt>
+            <dd class="contacts__address">
+              г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис  101
+            </dd>
+          </dl>
+        </div>
         <section class="contacts__map"></section>
-        <a href="feedback.html" class="btn">Напишите нам</a>
+        <div class="contacts__inner">
+          <a href="feedback.html" class="btn  contacts__btn">Напишите нам</a>
+        </div>
       </article>
     </main>
     <footer class="footer">
@@ -141,37 +160,49 @@
         <section class="social">
           <h2 class="visually-hidden">Mishka в социальных сетях:</h2>
           <a href="#" class="social__link  social__link--insta">
+            <svg class="social__icon" width="" height="">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
             <span class="visually-hidden">Instagram</span>
           </a>
           <a href="#" class="social__link  social__link--fb">
+            <svg class="social__icon" width="" height="">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
             <span class="visually-hidden">Facebook</span>
           </a>
           <a href="#" class="social__link  social__link--twitter">
+            <svg class="social__icon" width="" height="">
+              <use xlink:href="#icon-twitter"></use>
+            </svg>
             <span class="visually-hidden">Twitter</span>
           </a>
         </section>
         <section class="footer__copyright">
           Разработано
           <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">
+            <svg class="footer__icon" width="" height="">
+              <use xlink:href="#icon-academy"></use>
+            </svg>
             <span class="visually-hidden">HTML-Academy</span>
           </a>
         </section>
       </div>
     </footer>
-    <div class="overlay">
-      <article class="modal">
-        <h2 class="modal__title">Добавить  в корзину</h2>
-        <p class="modal__description">Выберите размер:</p>
-        <form action="/" method="get" class="modal__form">
-          <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden" checked>
-          <label for="check_s" class="modal__check">s</label>
-          <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden">
-          <label for="check_m" class="modal__check">m</label>
-          <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden">
-          <label for="check_l" class="modal__check">l</label>
-          <button type="submit" class="btn  btn--green">Добавить</button>
-        </form>
-      </article>
-    </div>
+    <div class="overlay"></div>
+    <article class="modal">
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+      <p class="modal__description">Выберите размер:</p>
+      <form action="/" method="get" class="modal__form">
+        <input type="radio" name="check-size" id="check_s" value="size_s" class="visually-hidden  modal__radio" checked>
+        <label for="check_s" class="modal__check">s</label>
+        <input type="radio" name="check-size" id="check_m" value="size_m" class="visually-hidden  modal__radio">
+        <label for="check_m" class="modal__check">m</label>
+        <input type="radio" name="check-size" id="check_l" value="size_l" class="visually-hidden  modal__radio">
+        <label for="check_l" class="modal__check">l</label>
+        <button type="submit" class="btn  btn--green  modal__btn">Добавить</button>
+      </form>
+    </article>
+  <script src="js/script.js"></script>
   </body>
 </html>
