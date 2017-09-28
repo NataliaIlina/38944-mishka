@@ -1,5 +1,6 @@
 {
   "sort-order":[
+    "$include",
     "position",
     "top",
     "right",
