@@ -6,6 +6,12 @@
 
 .form__inner {
   .inner();
+
+  &--flex {
+    display: flex;
+
+    flex-direction: column;
+  }
 }
 
 .form__title {
@@ -110,6 +116,7 @@
 }
 
 .form__label {
+  position: relative;
   display: block;
   font-size: 1.15rem;
   font-weight: 700;
@@ -156,6 +163,8 @@
   outline: none;
   box-sizing: border-box;
 
+  order: 2;
+
   &::placeholder {
     color: fade(@brown, 30%);
   }
@@ -164,6 +173,19 @@
   &:focus {
     border-color: @green-lighten;
   }
+
+  &:hover + .form__label .form__icon,
+  &:focus + .form__label .form__icon {
+    fill: @green-lighten;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+
+  fill: fade(@brown, 20%);
 }
 
 .form__textarea {

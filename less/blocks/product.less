@@ -3,6 +3,7 @@
   margin: 0 auto;
   margin-bottom: 30px;
   border: 1px solid @border-color;
+  box-sizing: border-box;
 
   &:hover .product__info {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -25,6 +26,15 @@
   line-height: 1.4;
   color: @black;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: fade(@black, 60%)
+  }
+
+  &:active {
+    color: fade(@black, 30%)
+  }
 }
 
 .product__options {
@@ -36,12 +46,30 @@
 }
 
 .product__buy {
+  display: flex;
+  padding-top: 20px;
   border-top: 1px solid @border-color;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
 .product__price {
-  margin: 20px 0 0;
+  margin: 0;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.6;
+}
+
+.product__icon {
+  fill: fade(@brown, 20%);
+}
+
+.product__cart-link:hover .product__icon,
+.product__cart-link:focus .product__icon {
+  fill: @green-lighten;
+}
+
+.product__cart-link:focus .product__icon {
+  fill: fade(@green-lighten, 30%);
 }

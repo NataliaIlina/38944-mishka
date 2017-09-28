@@ -1,5 +1,4 @@
 .main-nav {
-  // margin-top: 80px;
   width: 100%;
   font-size: 1.1rem;
   line-height: 1.4;
@@ -13,6 +12,7 @@
 }
 
 .main-nav__link {
+  position: relative;
   display: block;
   padding: 28px 30px;
   padding-left: 75px;
@@ -22,10 +22,28 @@
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    color: fade(@black, 60%);
   }
 
   &:active {
-    opacity: 0.3;
+    color: fade(@black, 30%);
   }
+
+  &:hover .main-nav__icon,
+  &:focus .main-nav__icon {
+    fill: @green-lighten;
+  }
+
+  &:active .main-nav__icon {
+    fill: fade(@green-lighten, 30%);
+  }
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+
+  fill: fade(@brown, 20%);
 }

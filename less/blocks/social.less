@@ -1,5 +1,25 @@
 .social {
+  display: flex;
   width: 100%;
   min-height: 80px;
+  padding-top: 8px;
   border-bottom: 1px solid @border-color;
+  box-sizing: border-box;
+
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+  padding: 20px;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: @green-darken-hover;
+}
+
+.social__link:active .social__icon {
+  fill: fade(@green-darken-hover, 30%);
 }

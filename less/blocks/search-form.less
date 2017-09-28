@@ -1,4 +1,5 @@
 .search-form {
+  position: relative;
   border-bottom: 1px solid @border-color;
 }
 
@@ -16,6 +17,30 @@
 
   &:hover::placeholder,
   &:focus::placeholder {
-    opacity: 0.6;
+    color: fade(@black, 60%);
   }
+
+  &:hover + .search-form__label .search-form__icon {
+    fill: @green-lighten;
+  }
+
+  &:focus + .search-form__label .search-form__icon {
+    fill: fade(@green-lighten, 30%);
+  }
+}
+
+.search-form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 60px;
+  height: 100%;
+}
+
+.search-form__icon {
+  margin: auto;
+  margin-left: 30px;
+
+  fill: fade(@brown, 20%);
 }
