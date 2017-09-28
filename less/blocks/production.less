@@ -1,7 +1,6 @@
 .production {
-  margin-bottom: 55px;
-
   .inner();
+  margin-bottom: 55px;
 }
 
 .production__inner {
@@ -9,6 +8,7 @@
   width: 260px;
   margin: 0 auto;
   border: 1px solid @border-color;
+  box-sizing: border-box;
 
   &:hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -46,7 +46,7 @@
 
 .production__video-toggle {
   position: absolute;
-  top: 140px;
+  top: 130px;
   left: 50%;
   width: 102px;
   height: 78px;
