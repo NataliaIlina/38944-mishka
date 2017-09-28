@@ -31,12 +31,16 @@ for(var i = 0; i < buyBtns.length; i++){
   })
 }
 
-modalSubmit.addEventListener("submit", function(){
+overlay.addEventListener("click", function(){
   overlay.classList.remove("overlay--show");
   modal.classList.remove("modal--show");
 })
 
-overlay.addEventListener("click", function(){
+modal.addEventListener("click", function(event) {
+  event.stopPropagation();
+})
+
+modalSubmit.addEventListener("submit", function(event){
   overlay.classList.remove("overlay--show");
   modal.classList.remove("modal--show");
 })
