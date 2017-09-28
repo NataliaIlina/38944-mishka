@@ -9,6 +9,8 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var csscomb = require("gulp-csscomb");
+var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore");
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -44,4 +46,12 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
+});
+
+gulp.task("symbols", function() {
+ return gulp.src("img/icons/*.svg")
+ .pipe(svgmin())
+ .pipe(svgstore({ inlineSvg: true }))
+ .pipe(rename("icons.svg"))
+ .pipe(gulp.dest("img"));
 });
