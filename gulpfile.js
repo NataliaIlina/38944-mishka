@@ -28,7 +28,7 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("csscomb", function(){
+gulp.task("csscomb", function() {
   gulp.src("less/blocks/*.less")
   .pipe(plumber())
   .pipe(csscomb())
@@ -49,9 +49,9 @@ gulp.task("serve", ["style"], function() {
 });
 
 gulp.task("symbols", function() {
- return gulp.src("img/icons/*.svg")
- .pipe(svgmin())
- .pipe(svgstore({ inlineSvg: true }))
- .pipe(rename("icons.svg"))
- .pipe(gulp.dest("img"));
+  return gulp.src("img/icons/*.svg")
+  .pipe(svgmin())
+  .pipe(svgstore({ inlineSvg: true }))
+  .pipe(rename("icons.svg"))
+  .pipe(gulp.dest("img"));
 });
