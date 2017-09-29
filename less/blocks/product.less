@@ -19,22 +19,13 @@
 }
 
 .product__link {
+  .link-hover();
   display: block;
   margin-bottom: 5px;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.4;
-  color: @black;
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: fade(@black, 60%)
-  }
-
-  &:active {
-    color: fade(@black, 30%)
-  }
 }
 
 .product__options {
