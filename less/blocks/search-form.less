@@ -1,6 +1,13 @@
 .search-form {
   position: relative;
   border-bottom: 1px solid @border-color;
+
+  @media @tablet {
+    border: none;
+    margin-left: auto;
+    height: 100%;
+    width: auto;
+  }
 }
 
 .search-form__field {
@@ -27,6 +34,11 @@
   &:focus + .search-form__label .search-form__icon {
     fill: fade(@green-lighten, 30%);
   }
+
+  @media @tablet {
+    // TODO: _____ПОКАЗАТЬ СТРОКУ ПОИСКА ПРИ НАВЕДЕНИИ НА ИКОНКУ________
+    display: none;
+  }
 }
 
 .search-form__label {
@@ -36,6 +48,15 @@
   display: flex;
   width: 60px;
   height: 100%;
+  cursor: pointer;
+
+  @media @tablet {
+    position: static;
+    width: 82px;
+    height: 86px;
+    border: 1px solid @border-color;
+    border-color: transparent @border-color;
+  }
 }
 
 .search-form__icon {
