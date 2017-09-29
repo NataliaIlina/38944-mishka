@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -17,44 +18,47 @@
       <symbol id="icon-phone" viewBox="0 0 24.829 24.333"><path d="M17.321 24.333h-1.115c-4.904-.58-8.497-2.857-11.11-5.772C2.473 15.637.402 11.875 0 6.817V5.459c.091-.921.544-1.55 1.067-2.086.65-.666 1.63-1.522 2.522-1.553.659-.022 1.78.451 2.232 1.066.388.53.595 1.59.775 2.378.185.797.6 1.95.485 2.717-.176 1.196-1.764 1.703-2.231 2.572 1.551 3.721 4.089 6.456 7.472 8.345.847-.465 1.595-1.864 2.767-1.892.428-.012.972.209 1.406.34.477.143.891.326 1.311.484.705.266 1.957.621 2.378 1.213.433.61.681 1.608.581 2.231-.194 1.234-2.227 2.603-3.444 3.059zM12.529 1.528c5.949 0 10.771 4.822 10.771 10.771h1.529C24.829 5.507 19.323 0 12.529 0v1.528z"/><path d="M12.529 9.327v1.552a1.42 1.42 0 0 1 1.421 1.42h1.553a2.973 2.973 0 0 0-2.974-2.972zM12.529 6.246a6.054 6.054 0 0 1 6.056 6.054h1.588a7.642 7.642 0 0 0-7.644-7.641v1.587z"/></symbol>
     </svg>
     <header class="header">
-      <div class="header__inner">
-        <section class="header__info-block">
-          <a href="index.html" class="logo">
-            <picture class="logo__image">
-              <source media="(min-width: 1200px)" srcset="">
-              <source media="(min-width: 768px)" srcset="">
-              <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
-            </picture>
-          </a>
-          <button class="header__nav-toggle  header__nav-toggle--nojs">
-            <span class="visually-hidden">Открыть/закрыть меню</span>
-          </button>
-        </section>
-        <nav class="main-nav">
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle  main-nav__toggle--nojs">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
+        <a class="logo" href="index.html">
+          <picture class="logo__image">
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
+            <img src="img/logo-mobile.svg" alt="Mishka" width="" height="">
+          </picture>
+        </a>
+        <div class="main-nav__nav-links">
           <a href="catalog.html" class="main-nav__link">Каталог товаров</a>
-          <a class="main-nav__link  main-nav__link--active">Вязание на заказ</a>
-          <div class="main-nav__user-block">
-            <form class="search-form">
-              <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
-              <label for="search_field" class="search-form__label">
-                <svg class="search-form__icon" width="18" height="18">
-                  <use xlink:href="#icon-search"></use>
-                </svg>
-                <span class="visually-hidden">Поиск по сайту</span>
-              </label>
-            </form>
-            <a href="/cart" class="main-nav__link  main-nav__link--cart">
-              <svg class="main-nav__icon" width="20" height="19">
-                <use xlink:href="#icon-cart"></use>
+          <a class="main-nav__link">Вязание на заказ</a>
+          <a href="new-goods.html" class="main-nav__link  main-nav__link--sub">Новые поступления</a>
+          <a href="sale.html" class="main-nav__link  main-nav__link--sub">Распродажа</a>
+        </div>
+        <div class="main-nav__user-block">
+          <form class="search-form">
+            <input class="search-form__field" type="search" name="search"  id="search_field" placeholder="Поиск по сайту">
+            <label for="search_field" class="search-form__label">
+              <svg class="search-form__icon" width="18" height="18">
+                <use xlink:href="#icon-search"></use>
               </svg>
-              Корзина: пока пуста
-            </a>
-          </div>
-        </nav>
-        <section class="header__content  header__content--inner-page">
-          <h1 class="header__title">Вязание на заказ</h1>
-        </section>
-      </div>
+              <span class="visually-hidden">Поиск по сайту</span>
+            </label>
+          </form>
+          <a href="/cart" class="main-nav__link  main-nav__link--cart">
+            <svg class="main-nav__icon" width="20" height="19">
+              <use xlink:href="#icon-cart"></use>
+            </svg>
+            Корзина: пока пуста
+          </a>
+          <p class="main-nav__description">
+            Бесплатная доставка по России
+          </p>
+        </div>
+      </nav>
+      <section class="header__content  header__content--inner-page">
+        <h1 class="header__title">Вязание на заказ</h1>
+      </section>
     </header>
 
     <main class="main-content">
