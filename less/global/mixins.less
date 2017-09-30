@@ -1,5 +1,4 @@
 .inner() {
-  outline: 1px solid orange;
   box-sizing: border-box;
   width: 100%;
   padding: 0 30px;
@@ -21,5 +20,19 @@
 
   &:active {
     color: fade(@black, 30%);
+  }
+}
+
+.title-font() {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  font-weight: 700;
+
+  @media @tablet {
+    font-size: 2.85rem;
+  }
+
+  @media @desktop {
+    font-size: 3.5rem;
   }
 }
