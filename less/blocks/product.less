@@ -1,9 +1,9 @@
 .product {
+  box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
   margin-bottom: 30px;
   border: 1px solid @border-color;
-  box-sizing: border-box;
 
   &:hover .product__info {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -38,11 +38,10 @@
 
 .product__buy {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 20px;
   border-top: 1px solid @border-color;
-
-  justify-content: space-between;
-  align-items: center;
 }
 
 .product__price {
