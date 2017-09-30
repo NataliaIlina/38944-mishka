@@ -1,14 +1,20 @@
 .social {
   display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-sizing: border-box;
   width: 100%;
   min-height: 80px;
   padding-top: 8px;
   border-bottom: 1px solid @border-color;
-  box-sizing: border-box;
 
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+  @media @tablet {
+    flex-grow: 2;
+    width: 30%;
+    padding-top: 0;
+    border: none;
+  }
 }
 
 .social__link {
