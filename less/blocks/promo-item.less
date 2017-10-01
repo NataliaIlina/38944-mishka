@@ -1,7 +1,7 @@
 .promo-item {
   position: relative;
   box-sizing: border-box;
-  width: 320px;
+  // width: 320px;
   padding: 0 30px;
   margin: 0 auto;
 
@@ -87,10 +87,15 @@
 }
 
 .promo-item__image {
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+
   @media @tablet {
     position: absolute;
     top: 10px;
     right: 0;
+    width: auto;
   }
 }
 
@@ -160,9 +165,11 @@
 
 .promo-item__btn {
   width: 260px;
+  margin: 0 auto;
   margin-bottom: 43px;
 
   @media @tablet {
     width: 290px;
+    margin: 0;
   }
 }
