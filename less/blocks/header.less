@@ -12,10 +12,15 @@
 
   @media @tablet {
     height: 760px;
-    padding-top: 155px;
+    padding-top: 153px;
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position: center top;
     border-top: 1px solid @border-color;
+  }
+
+  @media @desktop {
+    background-position: center -10px;
+    background-size: 830px 760px;
   }
 }
 
@@ -45,13 +50,14 @@
 
 
   @media @tablet {
-    max-width: 1150px;
+    max-width: 1050px;
     padding: 0 50px;
     margin: 0 auto;
   }
 }
 
 .header__title {
+  .title-font();
   width: 260px;
   margin: 0 auto;
   font-size: 1.8rem;
@@ -61,12 +67,6 @@
   @media @tablet {
     width: 100%;
     max-width: 700px;
-    font-size: 2.9rem;
-  }
-
-  @media @desktop {
-    font-size: 3.5rem;
-    line-height: 1.1;
   }
 }
 
@@ -125,22 +125,6 @@
     width: 130px;
   }
 
-  &--toys {
-    background-color: @green-darken;
-
-    &::after {
-      right: 28px;
-      width: 60px;
-      height: 60px;
-      background: url("../img/icon-toy.svg");
-
-      @media @tablet {
-        right: 35px;
-        margin-top: -35px;
-      }
-    }
-  }
-
   @media @tablet {
     width: 50%;
     height: 132px;
@@ -151,6 +135,22 @@
 
     &:hover {
       transform: translateY(-5px);
+    }
+  }
+}
+
+.header__goods-link--toys {
+  background-color: @green-darken;
+
+  &::after {
+    right: 28px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/icon-toy.svg");
+
+    @media @tablet {
+      right: 35px;
+      margin-top: -35px;
     }
   }
 }
