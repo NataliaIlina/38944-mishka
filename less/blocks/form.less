@@ -2,21 +2,58 @@
   padding: 0;
   margin: 0;
   border: none;
-}
 
-.form__inner {
-  .inner();
+  legend {
+    padding: 10px 0 25px;
+  }
 
-  &--flex {
-    display: flex;
-    flex-direction: column;
+  @media @tablet {
+    legend {
+      padding: 17px 0;
+    }
+
+    &--gray {
+      background-color: @background-gray;
+    }
   }
 }
+// ---центровщик---
+.form__inner {
+  .inner();
+  position: relative;
 
+  @media @tablet {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &--contacts {
+      flex-direction: column;
+      padding-top: 45px;
+      padding-bottom: 30px;
+    }
+
+    &--submit {
+      justify-content: space-between;
+      padding-top: 5px;
+      padding-bottom: 40px;
+    }
+  }
+
+  @media @desktop {
+    &--submit {
+      width: 800px;
+      padding-top: 0;
+    }
+  }
+}
+// ---стили для заголовков---
 .form__title {
   display: flex;
   align-items: center;
-  margin: 10px 0 25px;
+  box-sizing: border-box;
+  margin: 0;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1;
@@ -33,11 +70,42 @@
     background-color: @green-lighten;
   }
 
-  &--name {
-    margin-bottom: 28px;
+  @media @tablet {
+    width: 167px;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  @media @desktop {
+    width: 175px;
+    padding-left: 60px;
   }
 }
+// ---группы чекбоксов/радио----
+.form__controls {
+  @media @tablet {
+    flex-grow: 2;
+    width: 500px;
 
+    &--color {
+      display: flex;
+      flex-flow: row wrap;
+      flex-grow: 0;
+      margin-bottom: -27px;
+    }
+  }
+
+  @media @desktop {
+    width: 700px;
+
+    &--color {
+      width: 800px;
+    }
+  }
+}
+//---общие стили для чекбоксов и радиокнопок
 .form__radio-label,
 .form__checkbox-label {
   position: relative;
@@ -50,8 +118,35 @@
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1;
+
+  @media @tablet {
+    height: 52px;
+    padding-top: 15px;
+    padding-left: 80px;
+    margin-bottom: 25px;
+    font-size: 1.25rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
+.form__radio-label:hover::before,
+.form__checkbox-label:hover::before {
+  border-color: @green-lighten;
+}
+
+.form__radio-label:active::before,
+.form__checkbox-label:active::before {
+  border-color: fade(@brown, 30%);
+}
+//окрашиваем лейблы в активный цвет при фокусе инпутов
+.form__radio:focus + label::before,
+.form__checkbox:focus + label::before {
+  border-color: @green-lighten;
+}
+//стили для радио-кнопок
 .form__radio-label::before {
   content: "";
   position: absolute;
@@ -62,14 +157,11 @@
   height: 38px;
   border: 2px solid @brown;
   border-radius: 50%;
-}
 
-.form__radio-label:hover::before {
-  border-color: @green-lighten;
-}
-
-.form__radio-label:active::before {
-  border-color: fade(@brown, 30%);
+  @media @tablet {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .form__radio:checked + label::after {
@@ -82,15 +174,30 @@
   margin-top: -8px;
   background-color: @green-lighten;
   border-radius: 50%;
-}
 
-.form__radio:focus + label::before,
-.form__checkbox:focus + label::before {
-  border-color: @green-lighten;
+  @media @tablet {
+    left: 15px;
+    width: 22px;
+    height: 22px;
+    margin-top: -11px;
+  }
 }
-
+//--стили для чекбоксов---
 .form__checkbox-label {
   margin-bottom: 23px;
+
+  @media @tablet {
+    width: 238px;
+    margin-bottom: 25px;
+
+    &:nth-of-type(odd) {
+      width: 262px;
+    }
+  }
+
+  @media @desktop {
+    width: 263px;
+  }
 }
 
 .form__checkbox-label::before {
@@ -102,64 +209,89 @@
   width: 38px;
   height: 38px;
   border: 2px solid @brown;
-}
 
-.form__checkbox-label:hover::before {
-  border-color: @green-lighten;
-}
-
-.form__checkbox-label:active::before {
-  border-color: fade(@brown, 30%);
+  @media @tablet {
+    width: 52px;
+    height: 52px;
+  }
 }
 
 .form__checkbox:checked + label::before {
   background: transparent url("../img/icon-tick.svg") no-repeat center;
   background-size: 25px;
-}
 
+  @media @tablet {
+    background-size: auto;
+  }
+}
+//--стили для стандартных лейблов---
 .form__label {
   position: relative;
-  display: block;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1;
 
-  &--phone,
-  &--mail,
-  &--textarea {
+  @media @tablet {
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    color: @green-lighten;
-    text-transform: uppercase;
+    margin-bottom: 27px;
+    font-size: 1.25rem;
 
-    &::after {
-      content: "";
-      display: block;
-      flex-grow: 2;
-      width: 50px;
-      height: 1px;
-      margin-left: 20px;
-      background-color: @green-lighten;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  &--textarea {
-    margin-top: 12px;
-    margin-bottom: 25px;
+  @media @desktop {
+    max-width: 700px;
   }
 }
+//--стили для нестандартных лейблов
+.form__green-label {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  color: @green-lighten;
+  text-transform: uppercase;
 
+  &--textarea {
+    margin-top: 7px;
+    margin-bottom: 25px;
+  }
+
+  @media @tablet {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    &--textarea {
+      width: auto;
+      margin-top: 20px;
+    }
+  }
+
+  @media @desktop {
+    max-width: 875px;
+  }
+}
+//---стили для полей ввода---
 .form__field {
   order: 2;
   box-sizing: border-box;
   width: 100%;
-  height: 53px;
-  margin-bottom: 21px;
+  height: 50px;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
   font: inherit;
   font-weight: 400;
   color: @brown;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid @black;
   outline: none;
@@ -173,26 +305,43 @@
     border-color: @green-lighten;
   }
 
-  &:hover + .form__label .form__icon,
-  &:focus + .form__label .form__icon {
+  &:hover + .form__icon,
+  &:focus + .form__icon {
     fill: @green-lighten;
   }
+
+  &--contacts {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media @tablet {
+    padding-left: 20px;
+    margin-bottom: 0;
+    margin-left: 25px;
+    font-size: 1.25rem;
+
+    &--contacts {
+      flex-grow: 2;
+      width: 500px;
+      margin-top: 6px;
+      margin-left: 0;
+    }
+  }
+
+  @media @desktop {
+    max-width: 700px;
+  }
 }
-
-.form__icon {
-  position: absolute;
-  top: 35px;
-  right: 5px;
-
-  fill: fade(@brown, 20%);
-}
-
+//---стили для textarea---
 .form__textarea {
   box-sizing: border-box;
   width: 100%;
   min-height: 142px;
-  padding: 15px;
-  font: inherit;
+  padding: 10px 15px;
+  font-family: inherit;
+  font-size: 1.15rem;
+  line-height: 1.2;
   color: @brown;
   border: 2px solid @black;
   outline: none;
@@ -205,16 +354,55 @@
   &:focus {
     border-color: @green-lighten;
   }
-}
 
+  @media @tablet {
+    flex-grow: 2;
+    width: 500px;
+    font-size: 1.25rem;
+  }
+
+  @media @desktop {
+    max-width: 700px;
+  }
+}
+//--стили для иконок---
+.form__icon {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+
+  fill: fade(@brown, 20%);
+
+  @media @tablet {
+    top: 15px;
+    right: 20px;
+  }
+
+  @media @desktop {
+    right: 5px;
+  }
+}
+//---стили для нижней части формы
 .form__comment {
+  margin-top: 10px;
   margin-bottom: 30px;
   font-size: 0.9rem;
   line-height: 1.1;
   color: @brown;
+
+  @media @tablet {
+    margin-top: 15px;
+    font-size: 1.15rem;
+  }
 }
 
 .form__btn {
   width: 100%;
   margin-bottom: 35px;
+
+  @media @tablet {
+    order: -1;
+    width: 230px;
+    margin-bottom: 0;
+  }
 }
