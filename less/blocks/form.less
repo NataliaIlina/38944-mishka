@@ -68,14 +68,14 @@
     height: 1px;
     margin-left: 20px;
     background-color: @green-lighten;
+
+    @media @tablet {
+      display: none;
+    }
   }
 
   @media @tablet {
     width: 167px;
-
-    &:after {
-      display: none;
-    }
   }
 
   @media @desktop {
