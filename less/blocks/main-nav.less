@@ -4,6 +4,11 @@
   font-size: 1.1rem;
   line-height: 1.4;
   background-color: @white;
+  outline: 1px solid red;
+
+  * {
+    outline: 1px solid blue;
+  }
 
   @media @tablet {
     display: flex;
@@ -18,7 +23,7 @@
 
   @media @desktop {
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
