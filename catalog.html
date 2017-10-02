@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <svg style="display:none">
@@ -70,8 +74,10 @@
             </picture>
           </a>
           <div class="product__info">
-            <a href="/products/1" class="product__link">Зайчик-попрыгайчик</a>
-            <p class="product__options">Рост 30 см, вес 200 г</p>
+            <div class="product__description">
+              <a href="/products/1" class="product__link">Зайчик-попрыгайчик</a>
+              <p class="product__options">Рост 30 см, вес 200 г</p>
+            </div>
             <div class="product__buy">
               <p class="product__price">1 200 руб.</p>
               <a href="/cart" class="product__cart-link  buy-btn">
@@ -92,8 +98,10 @@
             </picture>
           </a>
           <div class="product__info">
-            <a href="/products/2" class="product__link">Корзинка для белья</a>
-            <p class="product__options">Диаметр 15 см, высота 10 см</p>
+            <div class="product__description">
+              <a href="/products/2" class="product__link">Корзинка для белья</a>
+              <p class="product__options">Диаметр 15 см, высота 10 см</p>
+            </div>
             <div class="product__buy">
               <p class="product__price">690 руб.</p>
               <a href="/cart" class="product__cart-link  buy-btn">
@@ -114,8 +122,10 @@
             </picture>
           </a>
           <div class="product__info">
-            <a href="/products/3" class="product__link">Большая корзинка для&nbsp;игрушек</a>
-            <p class="product__options">Диаметр 30 см, высота 30 см</p>
+            <div class="product__description">
+              <a href="/products/3" class="product__link">Большая корзинка для&nbsp;игрушек</a>
+              <p class="product__options">Диаметр 30 см, высота 30 см</p>
+            </div>
             <div class="product__buy">
               <p class="product__price">1 500 руб.</p>
               <a href="/cart" class="product__cart-link  buy-btn">

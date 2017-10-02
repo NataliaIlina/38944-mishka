@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <svg style="display:none">
@@ -74,14 +78,12 @@
               <legend>
                 <span class="form__title">Тип</span>
               </legend>
-
               <div class="form__controls">
                 <input type="radio" name="type" id="type_interior" value="interior" class="visually-hidden  form__radio" checked>
                 <label for="type_interior" class="form__radio-label">Аксессуар для  интерьера</label>
                 <input type="radio" name="type" id="type_toy" value="toy" class="visually-hidden  form__radio">
                 <label for="type_toy" class="form__radio-label">Детская игрушка</label>
               </div>
-
             </div>
           </fieldset>
           <fieldset class="form__block  form__block--gray">
@@ -89,7 +91,6 @@
               <legend>
                 <span class="form__title">Цвет</span>
               </legend>
-
               <div class="form__controls  form__controls--color">
                 <input type="checkbox" class="visually-hidden  form__checkbox" name="check-color" value="color_white" id="color_white" checked>
                 <label for="color_white" class="form__checkbox-label">Белый</label>
@@ -127,12 +128,10 @@
               </div>
             </div>
           </fieldset>
-
           <fieldset class="form__block  form__block--gray">
             <div class="form__inner  form__inner--contacts">
               <label for="phone" class="form__green-label">
                 <span class="form__title">Тел</span>
-
                 <input type="tel" class="form__field  form__field--contacts" name="phone" id="phone" placeholder="+7 ХХХ ХХ ХХ*" required>
                 <svg class="form__icon" width="25" height="25">
                   <use xlink:href="#icon-phone"></use>
@@ -140,7 +139,6 @@
               </label>
               <label for="mail" class="form__green-label">
                 <span class="form__title">e-mail</span>
-
                 <input type="email" class="form__field  form__field--contacts" name="mail" id="mail" placeholder="Ваш Email*" required>
                 <svg class="form__icon" width="32" height="32">
                   <use xlink:href="#icon-mail"></use>
@@ -148,7 +146,6 @@
               </label>
             </div>
           </fieldset>
-
           <fieldset class="form__block">
             <div class="form__inner">
               <label for="textarea" class="form__green-label  form__green-label--textarea">
@@ -157,7 +154,6 @@
               <textarea class="form__textarea" placeholder="Опишите все ваши  пожелания к заказу" id="textarea"></textarea>
             </div>
           </fieldset>
-
           <div class="form__inner  form__inner--submit">
             <p class="form__comment">*Поля обязательны для заполнения</p>
             <button class="btn  form__btn" type="submit">Отправить заказ</button>
