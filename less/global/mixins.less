@@ -1,17 +1,22 @@
 .inner() {
   box-sizing: border-box;
-  width: 100%;
+  width: 320px;
   padding: 0 30px;
+  margin: 0 auto;
 
   @media @tablet {
     padding: 0 50px;
-    max-width: 1150px;
-    margin: 0 auto;
+    width: 768px;
+  }
+
+  @media @desktop {
+    width: 1150px;
   }
 }
 
 .link-hover() {
   color: @black;
+  transition: color 0.2s linear;
 
   &:hover,
   &:focus {
