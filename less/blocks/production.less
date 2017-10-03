@@ -1,16 +1,13 @@
 .production {
+  .inner();
   position: relative;
-  width: 260px;
-  margin: 0 auto;
   margin-bottom: 55px;
 
   @media @tablet {
-    width: 668px;
     margin-bottom: 65px;
   }
 
   @media @desktop {
-    width: 100%;
     height: 455px;
     margin-bottom: 105px;
   }
@@ -112,9 +109,11 @@
   cursor: pointer;
   background: transparent url("../img/icon-play.svg") no-repeat center;
   border: none;
-  outline: none;
+  transition: transform 0.3s ease;
 
-  &:hover {
+
+  &:hover,
+  &:focus {
     transform: scale(1.2);
   }
 
