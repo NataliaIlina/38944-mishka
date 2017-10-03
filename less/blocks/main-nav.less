@@ -1,6 +1,6 @@
 .main-nav {
-  box-sizing: border-box;
-  width: 100%;
+  .inner();
+  padding: 0;
   font-size: 1.1rem;
   line-height: 1.4;
   background-color: @white;
@@ -11,9 +11,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 88px;
-    max-width: 1150px;
-    padding: 0 50px;
-    margin: 0 auto;
   }
 
   @media @desktop {
@@ -172,13 +169,12 @@
 .main-nav__toggle {
   position: absolute;
   top: 18px;
-  right: 10px;
+  left: ~"calc(50% + 90px)";
   padding: 30px;
   margin-top: -11px;
   cursor: pointer;
   background-color: transparent;
   border: none;
-  outline: none;
 
   &::before {
     content: "";

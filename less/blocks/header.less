@@ -47,13 +47,6 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-
-
-  @media @tablet {
-    max-width: 1050px;
-    padding: 0 50px;
-    margin: 0 auto;
-  }
 }
 
 .header__title {
@@ -71,7 +64,10 @@
 }
 
 .header__goods {
-  width: 100%;
+  .inner();
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
 
   @media @tablet {
     display: flex;
@@ -131,9 +127,10 @@
     padding: 27px 35px;
     font-size: 1.33rem;
     line-height: 1.5;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease-out;
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateY(-5px);
     }
   }

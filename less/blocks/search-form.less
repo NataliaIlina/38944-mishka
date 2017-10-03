@@ -22,10 +22,14 @@
     height: 86px;
     border: 1px solid @border-color;
     border-color: transparent @border-color;
-  }
 
-  @media @desktop {
-    &:hover .search-form__field {
+    &:hover .search-form__icon,
+    &:focus .search-form__icon {
+      fill: @green-lighten;
+    }
+
+    &:hover .search-form__field,
+    &:focus .search-form__field {
       display: block;
     }
   }
