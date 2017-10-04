@@ -1,7 +1,8 @@
 .btn {
-  display: inline-block;
+  display: block;
+  box-sizing: border-box;
   padding: 14px 20px;
-  font: inherit;
+  font-family: inherit;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.2;
@@ -11,19 +12,19 @@
   text-transform: uppercase;
   cursor: pointer;
   background-color: @white;
-  border: 2px solid @btn-background;
+  border: 2px solid @brown;
   outline: none;
-  box-sizing: border-box;
+  transition: all 0.3s ease-in;
 
   &:hover,
   &:focus {
     color: @white;
-    background-color: @btn-background;
+    background-color: @brown;
   }
 
   &:active {
     color: fade(@white, 30%);
-    background-color: @btn-background;
+    background-color: @brown;
   }
 
   &--green {

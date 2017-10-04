@@ -1,41 +1,64 @@
 .about-us {
-  padding: 28px 0 0;
+  .inner();
+  padding-top: 16px;
+  margin-bottom: 35px;
+
+  @media @tablet {
+    padding-top: 43px;
+    margin-bottom: 38px;
+  }
+
+  @media @desktop {
+    padding-top: 48px;
+  }
 }
 
 .about-us__inner {
-  .inner();
+  width: 100%;
+  margin: 0 auto;
+
+  @media @tablet {
+    max-width: 700px;
+  }
 }
 
 .about-us__title {
+  .title-font();
   margin: 0;
   margin-bottom: 25px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.2;
+
+  @media @tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .about-us__list {
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media @tablet {
+    display: flex;
+    flex-flow: row wrap;
+  }
 }
 
 .about-us__item {
   position: relative;
+  box-sizing: border-box;
   height: 123px;
   padding: 60px 0 20px;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.2;
-  box-sizing: border-box;
 
   &::before {
+    content: "";
     position: absolute;
     top: 5px;
     left: -5px;
     width: 60px;
     height: 40px;
-    content: "";
   }
 
   &--ecology::before {
@@ -60,5 +83,41 @@
 
   &--gift::before {
     background: @white url("../img/icon-feature-gift.svg") no-repeat 7px 5px;
+  }
+
+  @media @tablet {
+    width: 50%;
+    padding: 65px 20px 20px 0;
+    margin-bottom: 31px;
+    font-size: 1.33rem;
+    line-height: 1.1;
+
+    &--ecology {
+      order: 1;
+    }
+
+    &--price {
+      order: 3;
+    }
+
+    &--like {
+      order: 5;
+    }
+
+    &--knitting {
+      order: 2;
+    }
+
+    &--our-product {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+
+  @media @desktop {
+    padding: 60px 20px 20px 0;
   }
 }

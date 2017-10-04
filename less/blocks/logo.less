@@ -1,8 +1,34 @@
 .logo {
-  margin: auto;
+  display: flex;
+  width: 100%;
+  height: 78px;
+  background-color: @white;
+  border-bottom: 1px solid @border-color;
+
+  @media @tablet {
+    width: 300px;
+    height: 86px;
+    border: none;
+  }
+
+  @media @desktop {
+    order: 2;
+    width: auto;
+  }
 }
 
-.logo[href] {
+.logo__link {
+  display: block;
+  margin: auto;
+  transition: opacity 0.3s ease;
+
+  @media @tablet {
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+.logo__link[href] {
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -11,4 +37,27 @@
   &:active {
     opacity: 0.3;
   }
+}
+
+.logo__image {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: 22px auto;
+
+  @media @tablet {
+    width: 113px;
+    height: 46px;
+    margin: 21px 0;
+  }
+
+  @media @desktop {
+    width: 149px;
+    height: 72px;
+    margin: 8px 0;
+  }
+}
+
+.logo__image img {
+  display: block;
 }

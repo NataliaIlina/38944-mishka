@@ -11,3 +11,5 @@ bower_components/
 npm-debug.*
 Thumbs.db
 package-lock.json
+img/icons.svg
+img/icons/

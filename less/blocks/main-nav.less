@@ -1,21 +1,54 @@
 .main-nav {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  z-index: 5;
-  width: 100%;
+  .inner();
+  padding: 0;
   font-size: 1.1rem;
   line-height: 1.4;
   background-color: @white;
 
-  &--close {
-    @media @only-mobile {
-      transform: translateY(-200%);
-    }
+  @media @tablet {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 88px;
+  }
+
+  @media @desktop {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.main-nav--close .main-nav__nav-links,
+.main-nav--close .main-nav__user-block {
+  @media @only-mobile {
+    display: none;
+  }
+}
+
+.main-nav__nav-links {
+  width: 100%;
+
+  @media @tablet {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    order: 2;
+    width: 50%;
+  }
+
+  @media @desktop {
+    align-content: flex-start;
+    justify-content: flex-start;
+    order: 1;
+    width: 450px;
+    height: auto;
   }
 }
 
 .main-nav__link {
+  position: relative;
   display: block;
   padding: 28px 30px;
   padding-left: 75px;
@@ -23,12 +56,175 @@
   text-decoration: none;
   border-bottom: 1px solid @border-color;
 
-  &:hover,
-  &:focus {
+  &:hover .main-nav__icon,
+  &:focus .main-nav__icon {
+    fill: @green-lighten;
+  }
+
+  &:active .main-nav__icon {
+    fill: fade(@green-lighten, 30%);
+  }
+
+  @media @tablet {
+    width: 50%;
+    padding: 20px 0;
+    padding-left: 0;
+    font-size: 1rem;
+    border: none;
+  }
+
+  @media @desktop {
+    width: auto;
+    padding: 32px 0;
+    font-size: 1.15rem;
+  }
+}
+
+.main-nav__link[href] {
+  .link-hover();
+}
+
+.main-nav__nav-links .main-nav__link:first-child {
+  @media @desktop {
+    border-right: 1px solid @border-color;
+  }
+}
+
+.main-nav__nav-links .main-nav__link:nth-child(2n+1) {
+  @media @desktop {
+    width: 185px;
+  }
+}
+
+.main-nav__nav-links .main-nav__link:nth-child(2n) {
+  @media @desktop {
+    padding-left: 35px;
+  }
+}
+
+.main-nav__link--sub {
+  display: none;
+
+  @media @desktop {
+    display: block;
+    padding: 18px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.main-nav__link--cart {
+  @media @tablet {
+    box-sizing: border-box;
+    width: 267px;
+    margin-top: 0;
+    font-size: 1.15rem;
+    text-align: right;
+  }
+}
+
+.main-nav__user-block {
+  position: relative;
+
+  @media @tablet {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    order: 1;
+    width: 350px;
+    height: 88px;
+    margin-left: auto;
+    background-color: transparent;
+  }
+
+  @media @desktop {
+    order: 3;
+    width: 350px;
+  }
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+
+  fill: fade(@brown, 20%);
+}
+
+.main-nav__description {
+  display: none;
+
+  @media @tablet {
+    display: block;
+    width: 350px;
+    margin: 20px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: right;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 18px;
+  left: ~"calc(50% + 90px)";
+  padding: 30px;
+  margin-top: -11px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    width: 20px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active::before,
+  &:active::after {
     opacity: 0.3;
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @media @tablet {
+    display: none;
+  }
+}
+
+.main-nav__toggle--close {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28px;
+    height: 2px;
+    margin-top: -1px;
+    margin-left: -14px;
+    background-color: @black;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }

@@ -1,5 +1,35 @@
 .social {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-sizing: border-box;
   width: 100%;
   min-height: 80px;
+  padding-top: 8px;
   border-bottom: 1px solid @border-color;
+
+  @media @tablet {
+    flex-grow: 2;
+    width: 30%;
+    padding-top: 5px;
+    border: none;
+  }
+}
+
+.social__link {
+  padding: 20px;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: @green-darken-hover;
+}
+
+.social__link:active .social__icon {
+  fill: fade(@green-darken-hover, 30%);
+}
+
+.social__icon {
+  transition: all 0.3s linear;
 }
