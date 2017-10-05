@@ -1,4 +1,16 @@
 .catalog {
   .inner();
-  margin-top: 28px;
+  padding-top: 28px;
+
+  @media @tablet {
+    padding-top: 70px;
+  }
+
+  @media @desktop {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding-top: 118px;
+  }
 }

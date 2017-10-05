@@ -2,113 +2,82 @@
   font-weight: 700;
 }
 
-.header__inner {
-  // .inner();
-}
-
-.header__info-block {
-  position: relative;
-  display: flex;
-  height: 79px;
-  border-bottom: 1px solid @border-color;
-}
-
-.header__nav-toggle {
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  width: 22px;
-  height: 22px;
-  margin-top: -11px;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-
-  &::before {
-    position: absolute;
-    top: 4px;
-    left: 0;
-    width: 20px;
-    height: 2px;
-    background-color: @black;
-    content: "";
-    box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
-  }
-
-  &:hover::before,
-  &:hover::after,
-  &:focus::before,
-  &:focus::after {
-    opacity: 0.6;
-  }
-
-  &:active::before,
-  &:active::after {
-    opacity: 0.3;
-  }
-}
-
-.header__nav-toggle--close {
-  &::before,
-  &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 28px;
-    height: 2px;
-    margin-top: -1px;
-    margin-left: -14px;
-    background-color: @black;
-    content: "";
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-}
-
-.header__nav-toggle--nojs {
-  display: none;
-}
-
 .header__content {
-  display: flex;
+  box-sizing: border-box;
   width: 100%;
-  min-height: 488px;
+  height: 488px;
   padding-top: 70px;
   margin-bottom: 28px;
-  background: #fbfbfb url("../img/hero-mobile@1x.jpg") no-repeat center -20px;
-  box-sizing: border-box;
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat center -15px;
 
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  &--inner-page {
-    min-height: 178px;
-    margin-bottom: 0;
-    background: @background-gray;
+  @media @tablet {
+    height: 760px;
+    padding-top: 153px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center top;
+    border-top: 1px solid @border-color;
   }
+
+  @media @desktop {
+    background-position: center -10px;
+    background-size: 830px 760px;
+  }
+}
+
+.header__content--inner-page {
+  height: 178px;
+  margin-bottom: 0;
+  background: @background-gray;
+  background-image: none;
+
+  @media @tablet {
+    height: 235px;
+    padding-top: 93px;
+  }
+
+  @media @desktop {
+    height: 265px;
+  }
+}
+
+.header__inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .header__title {
+  .title-font();
   width: 260px;
   margin: 0 auto;
   font-size: 1.8rem;
-  line-height: 1.1;
+  line-height: 1.15;
   text-align: center;
+
+  @media @tablet {
+    width: 100%;
+    max-width: 700px;
+  }
 }
 
 .header__goods {
-  width: 100%;
+  .inner();
+  width: 320px;
+  padding: 0;
+  margin: 0 auto;
+
+  @media @tablet {
+    display: flex;
+  }
 }
 
 .header__goods-link {
   position: relative;
   display: block;
+  box-sizing: border-box;
   height: 103px;
   padding: 25px 30px;
   font-size: 1.25rem;
@@ -116,7 +85,6 @@
   color: @white;
   text-decoration: none;
   background-color: @green-lighten;
-  box-sizing: border-box;
 
   &:active span {
     opacity: 0.3;
@@ -132,6 +100,7 @@
   }
 
   &::after {
+    content: "";
     position: absolute;
     top: 50%;
     right: 35px;
@@ -139,8 +108,12 @@
     height: 62px;
     margin-top: -30px;
     background: url("../img/icon-interior.svg");
-    content: "";
     opacity: 0.5;
+
+    @media @tablet {
+      right: 38px;
+      margin-top: -38px;
+    }
   }
 
   span {
@@ -148,14 +121,33 @@
     width: 130px;
   }
 
-  &--toys {
-    background-color: @green-darken;
+  @media @tablet {
+    width: 50%;
+    height: 132px;
+    padding: 27px 35px;
+    font-size: 1.33rem;
+    line-height: 1.5;
+    transition: transform 0.3s ease-out;
 
-    &::after {
-      right: 28px;
-      width: 60px;
-      height: 60px;
-      background: url("../img/icon-toy.svg");
+    &:hover,
+    &:focus {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.header__goods-link--toys {
+  background-color: @green-darken;
+
+  &::after {
+    right: 28px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/icon-toy.svg");
+
+    @media @tablet {
+      right: 35px;
+      margin-top: -35px;
     }
   }
 }

@@ -1,9 +1,8 @@
 .product {
+  box-sizing: border-box;
   width: 260px;
   margin: 0 auto;
   margin-bottom: 30px;
-  border: 1px solid @border-color;
-  box-sizing: border-box;
 
   &:hover .product__info {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
@@ -12,29 +11,93 @@
   &:active .product__info {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
   }
+
+  @media @tablet {
+    display: flex;
+    width: 668px;
+    margin-bottom: 53px;
+  }
+
+  @media @desktop {
+    flex-direction: column;
+    width: 316px;
+    margin: 0;
+    margin-right: 50px;
+    margin-bottom: 55px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.product__description {
+  padding-top: 28px;
+
+  @media @tablet {
+    padding-top: 25px;
+  }
+
+  @media @desktop {
+    min-height: 99px;
+    padding-top: 28px;
+  }
 }
 
 .product__info {
-  padding: 25px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 28px;
+  border: 1px solid @border-color;
+
+  @media @tablet {
+    width: 333px;
+    padding: 0 25px;
+  }
+
+  @media @desktop {
+    flex-grow: 2;
+    width: 100%;
+    padding: 0 28px;
+  }
 }
 
 .product__link {
+  .link-hover();
   display: block;
   margin-bottom: 5px;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.4;
-  color: @black;
   text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: fade(@black, 60%)
+  @media @tablet {
+    font-size: 1.33rem;
+    line-height: 1.2;
+  }
+}
+
+.product__image {
+  display: block;
+  width: 260px;
+  height: 185px;
+  background-color: @background-gray;
+
+  @media @tablet {
+    width: 334px;
+    height: 334px;
   }
 
-  &:active {
-    color: fade(@black, 30%)
+  @media @desktop {
+    width: 316px;
+    height: 462px;
   }
+}
+
+.product__image img {
+  display: block;
 }
 
 .product__options {
@@ -43,15 +106,35 @@
   font-size: 0.87rem;
   line-height: 2.3;
   color: @brown;
+
+  @media @tablet {
+    font-size: 1rem;
+    line-height: 2;
+  }
 }
 
 .product__buy {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 20px;
+  padding-bottom: 28px;
   border-top: 1px solid @border-color;
 
-  justify-content: space-between;
-  align-items: center;
+  @media @tablet {
+    padding-top: 22px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    padding-left: 6px;
+    margin-top: auto;
+  }
+
+  @media @desktop {
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 28px;
+    padding-left: 0;
+  }
 }
 
 .product__price {
@@ -59,6 +142,11 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.6;
+
+  @media @tablet {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
 }
 
 .product__icon {
@@ -70,6 +158,6 @@
   fill: @green-lighten;
 }
 
-.product__cart-link:focus .product__icon {
+.product__cart-link:active .product__icon {
   fill: fade(@green-lighten, 30%);
 }
