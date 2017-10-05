@@ -185,6 +185,10 @@
     margin-top: -11px;
   }
 }
+
+.form__radio:disabled + label {
+  opacity: 0.2;
+}
 //--стили для чекбоксов---
 .form__checkbox-label {
   margin-bottom: 23px;
@@ -227,6 +231,10 @@
   @media @tablet {
     background-size: auto;
   }
+}
+
+.form__checkbox:disabled + label {
+  opacity: 0.2;
 }
 //--стили для стандартных лейблов---
 .form__label {
