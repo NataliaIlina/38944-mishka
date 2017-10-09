@@ -5,48 +5,49 @@
   background-size: auto 7px;
 
   @media @tablet {
-    display: flex;
-    flex-flow: row-reverse wrap;
-    justify-content: space-between;
     background-size: auto 17px;
   }
 
   @media @desktop {
-    padding-top: 30px;
     background-size: 1050px 23px;
   }
 }
 
 .promo-item__info {
+  position: relative;
   padding-bottom: 45px;
 
   @media @tablet {
+    display: flex;
+    flex-direction: column;
+    padding-right: 333px;
     padding-bottom: 70px;
   }
 
   @media @desktop {
+    padding-right: 525px;
     padding-bottom: 95px;
     padding-left: 175px;
   }
 }
 
 .promo-item__image {
-  position: absolute;
-  bottom: 175px;
-  left: 50%;
   display: block;
   width: 260px;
   height: 315px;
-  margin-left: -130px;
+  margin-bottom: 25px;
 
   @media @tablet {
-    position: static;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 333px;
     height: 404px;
     margin: 0;
   }
 
   @media @desktop {
+    top: -165px;
     width: 525px;
     height: 636px;
   }
@@ -63,12 +64,10 @@
   }
 
   @media @desktop {
-    position: absolute;
-    top: 75px;
-    left: 50px;
-    z-index: 5;
     justify-content: flex-start;
     width: 700px;
+    padding-top: 75px;
+    margin-bottom: 50px;
   }
 }
 
@@ -83,6 +82,7 @@
   }
 
   @media @desktop {
+    z-index: 5;
     order: 2;
     margin: 0;
   }
@@ -127,7 +127,7 @@
   }
 
   @media @desktop {
-    padding-top: 165px;
+    padding-top: 0;
     margin-bottom: 48px;
   }
 }
@@ -162,8 +162,9 @@
 }
 
 .promo-item__price {
-  padding-top: 338px;
-  margin: 15px 0 25px;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: 25px;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.4;
