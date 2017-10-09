@@ -1,3 +1,4 @@
+var sliderWrap = document.querySelector('.feedback__slider');
 var slider = document.querySelector('.feedback__slider-inner');
 var btnPrev = document.querySelector('.feedback__toggle--prev');
 var btnNext = document.querySelector('.feedback__toggle--next');
@@ -20,7 +21,7 @@ if(slideNumber === 1){
 
 function nextSlide(){
   if(slideNumber < slideCount){
-    slideWidth = document.querySelector('.feedback__slider').offsetWidth;
+    slideWidth = sliderWrap.offsetWidth;
     translateWidth = - slideWidth * slideNumber;
     console.log(translateWidth);
     slider.style.transform = 'translateX('+ translateWidth +'px)';
@@ -41,7 +42,7 @@ function nextSlide(){
 function prevSlide(){
   if(slideNumber > 1){
     slideNumber--;
-    slideWidth = document.querySelector('.feedback__slider').offsetWidth;
+    slideWidth = sliderWrap.offsetWidth;
     translateWidth = - slideWidth * (slideNumber - 1);
     console.log(translateWidth);
     slider.style.transform = 'translateX('+ translateWidth +'px)';
