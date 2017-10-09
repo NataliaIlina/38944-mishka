@@ -3,13 +3,14 @@
   margin: 0;
   border: none;
 
-  legend {
+  h2 {
     width: 100%;
     padding: 10px 0 25px;
+    margin: 0;
   }
 
   @media @tablet {
-    legend {
+    h2 {
       width: auto;
       padding: 17px 0;
     }
@@ -45,8 +46,9 @@
 
   @media @desktop {
     &--submit {
-      width: 800px;
       padding-top: 0;
+      padding-right: 225px;
+      padding-left: 225px;
     }
   }
 }
@@ -141,7 +143,7 @@
 
 .form__radio-label:active::before,
 .form__checkbox-label:active::before {
-  border-color: fade(@brown, 30%);
+  border-color: fade(@gray-dark, 30%);
 }
 //окрашиваем лейблы в активный цвет при фокусе инпутов
 .form__radio:focus + label::before,
@@ -157,7 +159,7 @@
   box-sizing: border-box;
   width: 38px;
   height: 38px;
-  border: 2px solid @brown;
+  border: 2px solid @gray-dark;
   border-radius: 50%;
   transition: border 0.3s ease;
 
@@ -215,7 +217,7 @@
   box-sizing: border-box;
   width: 38px;
   height: 38px;
-  border: 2px solid @brown;
+  border: 2px solid @gray-dark;
   transition: border 0.3s ease;
 
   @media @tablet {
@@ -302,7 +304,7 @@
   margin-bottom: 18px;
   font: inherit;
   font-weight: 400;
-  color: @brown;
+  color: @gray-dark;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid @black;
@@ -310,7 +312,7 @@
   transition: border 0.3s ease;
 
   &::placeholder {
-    color: fade(@brown, 30%);
+    color: fade(@gray-dark, 30%);
   }
 
   &:hover,
@@ -355,13 +357,13 @@
   font-family: inherit;
   font-size: 1.15rem;
   line-height: 1.2;
-  color: @brown;
+  color: @gray-dark;
   border: 2px solid @black;
   outline: none;
   transition: border 0.3s ease;
 
   &::placeholder {
-    color: fade(@brown, 30%);
+    color: fade(@gray-dark, 30%);
   }
 
   &:hover,
@@ -385,7 +387,7 @@
   top: 35px;
   right: 5px;
 
-  fill: fade(@brown, 20%);
+  fill: fade(@gray-dark, 20%);
 
   @media @tablet {
     top: 15px;
@@ -402,7 +404,7 @@
   margin-bottom: 30px;
   font-size: 0.9rem;
   line-height: 1.1;
-  color: @brown;
+  color: @gray-dark;
 
   @media @tablet {
     margin-top: 15px;

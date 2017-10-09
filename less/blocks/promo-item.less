@@ -1,27 +1,31 @@
 .promo-item {
   .inner();
   position: relative;
+  background: @white url("../img/bg-zigzag-line.svg") no-repeat center bottom;
+  background-size: auto 7px;
 
   @media @tablet {
     display: flex;
     flex-flow: row-reverse wrap;
     justify-content: space-between;
+    background-size: auto 17px;
   }
 
   @media @desktop {
     padding-top: 30px;
+    background-size: 1050px 23px;
   }
 }
 
 .promo-item__info {
-  padding-bottom: 50px;
+  padding-bottom: 45px;
 
   @media @tablet {
     padding-bottom: 70px;
   }
 
   @media @desktop {
-    padding-bottom: 100px;
+    padding-bottom: 95px;
     padding-left: 175px;
   }
 }
@@ -163,7 +167,7 @@
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.4;
-  color: @brown;
+  color: @gray-dark;
   text-align: center;
 
   @media @tablet {

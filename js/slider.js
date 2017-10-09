@@ -11,9 +11,12 @@ var slideCount = slides.length;
 var slideWidth;
 var translateWidth;
 
+if(slideNumber === 1){
+  btnPrev.disabled = true;
+}
+
 //для задания нужной величины транслейта умножаем ширину слайдера на номер текущего слайда
 // var translateWidth = - slideWidth * slideNumber;
-
 
 function nextSlide(){
   if(slideNumber < slideCount){
@@ -22,6 +25,16 @@ function nextSlide(){
     console.log(translateWidth);
     slider.style.transform = 'translateX('+ translateWidth +'px)';
     slideNumber++;
+    if(slideNumber === 1){
+      btnPrev.disabled = true;
+    }
+    else if(slideNumber === slideCount){
+      btnNext.disabled = true;
+    }
+    else {
+      btnPrev.disabled = false;
+      btnNext.disabled = false;
+    }
   }
 }
 
@@ -32,9 +45,18 @@ function prevSlide(){
     translateWidth = - slideWidth * (slideNumber - 1);
     console.log(translateWidth);
     slider.style.transform = 'translateX('+ translateWidth +'px)';
+    if(slideNumber === 1){
+      btnPrev.disabled = true;
+    }
+    else if(slideNumber === slideCount){
+      btnNext.disabled = true;
+    }
+    else {
+      btnPrev.disabled = false;
+      btnNext.disabled = false;
+    }
   }
 }
 
 btnNext.addEventListener('click', nextSlide);
 btnPrev.addEventListener('click', prevSlide);
-//пока не хватает мозгов, чтоб задизейблить кнопки при первом и последнем слайде...
