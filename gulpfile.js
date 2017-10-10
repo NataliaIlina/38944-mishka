@@ -1,17 +1,17 @@
-"use strict";
+'use strict';
 
-var gulp = require("gulp");
-var csso = require("gulp-csso");
-var rename = require("gulp-rename");
-var less = require("gulp-less");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var csscomb = require("gulp-csscomb");
-var svgmin = require("gulp-svgmin");
-var svgstore = require("gulp-svgstore");
-var webp = require("gulp-webp");
+var gulp = require('gulp');
+var csso = require('gulp-csso');
+var rename = require('gulp-rename');
+var less = require('gulp-less');
+var plumber = require('gulp-plumber');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var server = require('browser-sync').create();
+var csscomb = require('gulp-csscomb');
+var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var webp = require('gulp-webp');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var watch = require('gulp-watch');
@@ -91,7 +91,7 @@ gulp.task('build-fonts', function() {
 });
 
 //чистим папку
-gulp.task('clean', function(){
+gulp.task('clean', function() {
   return del(['build']);
 })
 
@@ -108,16 +108,16 @@ gulp.task('build', [
 ])
 
 gulp.task('watch', function() {
-  gulp.watch(path.watch.style, ["build-style"]);
-  gulp.watch(path.watch.html, ["build-html"]);
-  gulp.watch(path.watch.js, ["build-js"]);
-  gulp.watch(path.watch.img, ["build-img"]);
-  gulp.watch(path.watch.fonts, ["build-fonts"]);
+  gulp.watch(path.watch.style, ['build-style']);
+  gulp.watch(path.watch.html, ['build-html']);
+  gulp.watch(path.watch.js, ['build-js']);
+  gulp.watch(path.watch.img, ['build-img']);
+  gulp.watch(path.watch.fonts, ['build-fonts']);
 });
 
-gulp.task("serve", ['watch'], function() {
+gulp.task('serve', ['watch'], function() {
   server.init({
-    server: "./build",
+    server: './build',
     notify: false,
     open: true,
     cors: true,
@@ -125,23 +125,23 @@ gulp.task("serve", ['watch'], function() {
   });
 });
 
-gulp.task("csscomb", function() {
-  gulp.src("less/blocks/*.less")
+gulp.task('csscomb', function() {
+  gulp.src('less/blocks/*.less')
   .pipe(plumber())
   .pipe(csscomb())
-  .pipe(gulp.dest("less/blocks/"))
+  .pipe(gulp.dest('less/blocks/'))
 });
 
-gulp.task("symbols", function() {
-  return gulp.src("img/icons/*.svg")
+gulp.task('symbols', function() {
+  return gulp.src('img/icons/*.svg')
   .pipe(svgmin())
   .pipe(svgstore({ inlineSvg: true }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  .pipe(rename('sprite.svg'))
+  .pipe(gulp.dest('build/img'));
 });
 
-gulp.task("webp", function(){
-  return gulp.src("img/*.jpg")
+gulp.task('webp', function() {
+  return gulp.src('img/*.jpg')
   .pipe(webp())
-  .pipe(gulp.dest("build/img/webp"));
+  .pipe(gulp.dest('build/img/webp'));
 });
