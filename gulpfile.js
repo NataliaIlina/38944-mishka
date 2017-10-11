@@ -70,7 +70,7 @@ gulp.task('build-style', function() {
   }))
   .pipe(gulp.dest(path.build.css))
   .pipe(server.reload({stream: true}));
-})
+});
 
 //сборка графики
 gulp.task('build-img', function() {
@@ -80,8 +80,7 @@ gulp.task('build-img', function() {
     optimizationLevel: 3,
     svgoPlugins: [{removeViewBox: false}]
   }))
-  .pipe(gulp.dest(path.build.img))
-  .pipe(server.reload({stream: true}));
+  .pipe(gulp.dest(path.build.img));
 });
 
 //переместим шрифты
@@ -93,11 +92,10 @@ gulp.task('build-fonts', function() {
 //чистим папку
 gulp.task('clean', function() {
   return del(['build']);
-})
+});
 
 //общая сборка
 gulp.task('build', [
-  // 'clean',
   'build-html',
   'build-js',
   'build-style',
@@ -105,7 +103,7 @@ gulp.task('build', [
   'build-fonts',
   'symbols',
   'webp'
-])
+]);
 
 gulp.task('watch', function() {
   gulp.watch(path.watch.style, ['build-style']);
