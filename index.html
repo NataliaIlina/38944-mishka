@@ -6,7 +6,7 @@
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.min.css">
     <script>
-      document.createElement( "picture" );
+      document.createElement("picture");
     </script>
     <script src="js/picturefill.js" async></script>
   </head>
@@ -104,6 +104,10 @@
             </tr>
           </table>
           <picture class="promo-item__image">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/triple-set-desktop@1x.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/triple-set-tablet@1x.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/triple-set-mobile@1x.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
+
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
@@ -133,7 +137,7 @@
               Поддержка  отечественного производителя
             </li>
             <li class="about-us__item  about-us__item--gift">
-              Поставляется в   подарочной&nbsp;упаковке
+              Поставляется в подарочной&nbsp;упаковке
             </li>
           </ul>
         </div>
@@ -164,8 +168,8 @@
               </blockquote>
             </div>
             <div class="feedback__controls">
-              <button class="feedback__toggle  feedback__toggle--prev">Показать предыдущий  отзыв</button>
-              <button class="feedback__toggle  feedback__toggle--next">Показать следующий  отзыв</button>
+              <button  type="button" class="feedback__toggle  feedback__toggle--prev">Показать предыдущий  отзыв</button>
+              <button  type="button" class="feedback__toggle  feedback__toggle--next">Показать следующий  отзыв</button>
             </div>
           </section>
           <a href="add-feedback.html" class="btn  feedback__btn">Написать</a>
@@ -199,19 +203,19 @@
         </a>
         <section class="social">
           <h2 class="visually-hidden">Mishka в социальных сетях:</h2>
-          <a href="#" class="social__link  social__link--insta">
+          <a href="https://www.instagram.com/" class="social__link  social__link--insta">
             <svg class="social__icon" width="22" height="22">
               <use xlink:href="#icon-insta"></use>
             </svg>
             <span class="visually-hidden">Instagram</span>
           </a>
-          <a href="#" class="social__link  social__link--fb">
+          <a href="https://www.facebook.com/" class="social__link  social__link--fb">
             <svg class="social__icon" width="15" height="28">
               <use xlink:href="#icon-fb"></use>
             </svg>
             <span class="visually-hidden">Facebook</span>
           </a>
-          <a href="#" class="social__link  social__link--twitter">
+          <a href="https://twitter.com/" class="social__link  social__link--twitter">
             <svg class="social__icon" width="24" height="20">
               <use xlink:href="#icon-twitter"></use>
             </svg>

@@ -8,8 +8,8 @@
 css/*.css
 node_modules/
 bower_components/
+build/
 npm-debug.*
 Thumbs.db
-package-lock.json
 img/icons.svg
 img/icons/

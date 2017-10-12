@@ -65,6 +65,10 @@
     fill: fade(@green-lighten, 30%);
   }
 
+  &--active {
+    color: @gray-dark;
+  }
+
   @media @tablet {
     width: 50%;
     padding: 20px 0;
@@ -147,10 +151,9 @@
   position: absolute;
   top: 50%;
   left: 30px;
+  fill: fade(@gray-dark, 20%);
   transform: translateY(-50%);
   transition: fill 0.3s ease;
-
-  fill: fade(@gray-dark, 20%);
 }
 
 .main-nav__description {
@@ -186,6 +189,7 @@
     height: 2px;
     background-color: @black;
     box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+    transition: all 0.3s ease-in;
   }
 
   &:hover::before,
@@ -223,6 +227,7 @@
     background-color: @black;
     transform: rotate(45deg);
     box-shadow: none;
+    transition: all 0.3s ease-in;
   }
 
   &::after {

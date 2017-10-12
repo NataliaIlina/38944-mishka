@@ -12,24 +12,24 @@ var slideCount = slides.length;
 var slideWidth;
 var translateWidth;
 
-if(slideNumber === 1){
+if(slideNumber === 1) {
   btnPrev.disabled = true;
 }
 
 //для задания нужной величины транслейта умножаем ширину слайдера на номер текущего слайда
 // var translateWidth = - slideWidth * slideNumber;
 
-function nextSlide(){
-  if(slideNumber < slideCount){
+function nextSlide() {
+  if(slideNumber < slideCount) {
     slideWidth = sliderWrap.offsetWidth;
     translateWidth = - slideWidth * slideNumber;
     console.log(translateWidth);
     slider.style.transform = 'translateX('+ translateWidth +'px)';
     slideNumber++;
-    if(slideNumber === 1){
+    if(slideNumber === 1) {
       btnPrev.disabled = true;
     }
-    else if(slideNumber === slideCount){
+    else if(slideNumber === slideCount) {
       btnNext.disabled = true;
     }
     else {
@@ -39,17 +39,17 @@ function nextSlide(){
   }
 }
 
-function prevSlide(){
-  if(slideNumber > 1){
+function prevSlide() {
+  if(slideNumber > 1) {
     slideNumber--;
     slideWidth = sliderWrap.offsetWidth;
     translateWidth = - slideWidth * (slideNumber - 1);
     console.log(translateWidth);
     slider.style.transform = 'translateX('+ translateWidth +'px)';
-    if(slideNumber === 1){
+    if(slideNumber === 1) {
       btnPrev.disabled = true;
     }
-    else if(slideNumber === slideCount){
+    else if(slideNumber === slideCount) {
       btnNext.disabled = true;
     }
     else {
