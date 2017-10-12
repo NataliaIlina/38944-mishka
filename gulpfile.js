@@ -65,6 +65,7 @@ gulp.task('build-style', function() {
   .pipe(postcss([
     autoprefixer()
   ]))
+  .pipe(gulp.dest(path.build.css))
   .pipe(csso())
   .pipe(rename({
     suffix: '.min'
