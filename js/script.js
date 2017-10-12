@@ -22,7 +22,7 @@ if(navToggle) {
       mainNav.classList.add('main-nav--close');
       navToggle.classList.remove('main-nav__toggle--close');
     }
-  })
+  });
 }
 
 if(modal) {
@@ -31,20 +31,20 @@ if(modal) {
       event.preventDefault();
       overlay.classList.add('overlay--show');
       modal.classList.add('modal--show');
-    })
+    });
   }
 
   overlay.addEventListener('click', function() {
     overlay.classList.remove('overlay--show');
     modal.classList.remove('modal--show');
-  })
+  });
 
   modal.addEventListener('click', function(event) {
     event.stopPropagation();
-  })
+  });
 
-  modalSubmit.addEventListener('submit', function(event) {
+  modalSubmit.addEventListener('submit', function() {
     overlay.classList.remove('overlay--show');
     modal.classList.remove('modal--show');
-  })
+  });
 }
