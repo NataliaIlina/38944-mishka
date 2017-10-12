@@ -16,6 +16,7 @@
     "gulp-plumber": "1.1.x",
     "gulp-postcss": "7.0.x",
     "gulp-rename": "^1.2.2",
+    "gulp-run-sequence": "^0.3.2",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
@@ -29,7 +30,7 @@
     "stylelint": "stylelint less/**/*.less --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp serve"
+    "start": "npm run build && gulp serve"
   },
   "browserslist": [
     "last 2 versions",

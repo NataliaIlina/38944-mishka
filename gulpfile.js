@@ -16,6 +16,7 @@ var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var watch = require('gulp-watch');
 var del = require('del');
+var run = require('gulp-run-sequence');
 
 var path = {
   build: {
@@ -29,7 +30,7 @@ var path = {
     html: '*.html',
     js: 'js/*.js',
     img: 'img/*.*',
-    fonts: 'fonts/**/*.*',
+    fonts: 'fonts/**/*.{woff,woff2}',
     style: 'less/style.less'
   },
   watch: {
@@ -43,14 +44,14 @@ var path = {
 
 //Сброрка html
 gulp.task('build-html', function() {
-  gulp.src(path.src.html)
+  return gulp.src(path.src.html)
   .pipe(gulp.dest(path.build.html))
   .pipe(server.reload({stream: true}));
 });
 
 //сборка JS
 gulp.task('build-js', function() {
-  gulp.src(path.src.js)
+  return gulp.src(path.src.js)
   .pipe(uglify())
   .pipe(gulp.dest(path.build.js))
   .pipe(server.reload({stream: true}));
@@ -74,7 +75,7 @@ gulp.task('build-style', function() {
 
 //сборка графики
 gulp.task('build-img', function() {
-  gulp.src(path.src.img)
+  return gulp.src(path.src.img)
   .pipe(imagemin({
     progressive: true,
     optimizationLevel: 3,
@@ -85,25 +86,29 @@ gulp.task('build-img', function() {
 
 //переместим шрифты
 gulp.task('build-fonts', function() {
-  gulp.src(path.src.fonts)
+  return gulp.src(path.src.fonts)
   .pipe(gulp.dest(path.build.fonts))
 });
 
 //чистим папку
 gulp.task('clean', function() {
-  return del(['build']);
+  return del('build');
 });
 
 //общая сборка
-gulp.task('build', [
-  'build-html',
-  'build-js',
-  'build-style',
-  'build-img',
-  'build-fonts',
-  'symbols',
-  'webp'
-]);
+gulp.task('build', function (done) {
+  run(
+    'clean',
+    'build-html',
+    'build-js',
+    'build-style',
+    'build-img',
+    'build-fonts',
+    'symbols',
+    'webp',
+    done
+  );
+});
 
 gulp.task('watch', function() {
   gulp.watch(path.watch.style, ['build-style']);
@@ -124,7 +129,7 @@ gulp.task('serve', ['watch'], function() {
 });
 
 gulp.task('csscomb', function() {
-  gulp.src('less/blocks/*.less')
+  return gulp.src('less/blocks/*.less')
   .pipe(plumber())
   .pipe(csscomb())
   .pipe(gulp.dest('less/blocks/'))
