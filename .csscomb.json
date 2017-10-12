@@ -80,6 +80,7 @@
     "list-style-image",
     "pointer-events",
     "cursor",
+    "fill",
     "background",
     "background-attachment",
     "background-color",
