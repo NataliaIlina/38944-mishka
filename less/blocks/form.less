@@ -127,6 +127,7 @@
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1;
+  cursor: pointer;
 
   @media @tablet {
     height: 52px;
@@ -232,13 +233,18 @@
   }
 }
 
-.form__checkbox:checked + label::before {
+.form__checkbox:checked + label::before,
+.form__checkbox-label:active::before {
   background: transparent url("../img/icon-tick.svg") no-repeat center;
   background-size: 25px;
 
   @media @tablet {
     background-size: auto;
   }
+}
+
+.form__checkbox:checked + label:active::before {
+  background: none;
 }
 
 .form__checkbox:disabled + label {
